@@ -1,0 +1,203 @@
+/* Chris Poteet’s Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+:focus { outline: 0;}
+a, a:link, a:visited, a:hover, a:active{text-decoration:none}
+table {	border-collapse: separate;border-spacing: 0;}
+th, td {text-align: left; font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {list-style: none;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+
+
+@font-face {
+    font-family: Code;
+    font-weight: bold;
+    src: url("../font/CODE%20Bold.otf");
+}
+
+
+@font-face {
+    font-family: Code;
+    font-weight: normal;
+    src: url("../font/CODE%20Light.otf");
+}
+
+
+body{
+    background-image: url(../assets/Background.jpg);
+    padding: 0px;
+    overflow: hidden;
+}
+
+#face{
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background-image: url(../assets/Face_home.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1000px;
+    width: 600px;
+}
+
+#title{
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    right: 400px;
+    top:20px;
+    background-image: url(../assets/Titulo_home.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 568px;
+    width: 700px;
+}
+
+
+#mancha{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background-image: url(../assets/Mancha.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+}
+
+#footer{
+
+}
+
+
+#div_01{
+    width: 100%;
+    height: 450px;
+}
+
+
+#div_02{
+    width: 100%;
+    height: 400px;
+
+}
+
+#div_03{
+    width: 100%;
+    height: 100px;
+
+}
+
+
+
+
+.icon{
+    float: right;
+    margin-right: 100px;
+    margin-top: 80px;
+    width: 200px;
+    height: 300px;
+    z-index: 999;
+
+}
+
+
+#icon_programador{
+    background: url("../assets/botoes/Icon_programador.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon_programador:hover{
+    cursor: pointer;
+    background: url("../assets/botoes/Icon_programador_over.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#icon_ilustrador{
+    background: url("../assets/botoes/Icon_ilustrador.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon_ilustrador:hover{
+    cursor: pointer;
+    background: url("../assets/botoes/Icon_ilustrador_over.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+#icon_gamedev{
+    background: url("../assets/botoes/Icon_gamedev.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon_gamedev:hover{
+    cursor: pointer;
+    background: url("../assets/botoes/Icon_gamedev_over.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon_professor{
+    background: url("../assets/botoes/Icon_professor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#icon_professor:hover{
+    cursor: pointer;
+    background: url("../assets/botoes/Icon_professor_over.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#menu_redes{
+    font-family: Code;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 100px;
+    color:#bebebe;
+}
+
+.bt_redes{
+    float: right;
+    margin-right: 30px;
+}
+
+.bt_redes:hover{
+    cursor: pointer;
+    color: #0b0b0b;
+}
+
+#footer{
+    font-family: Code;
+    font-weight: normal;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 17px;
+}
