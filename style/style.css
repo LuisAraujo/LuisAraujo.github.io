@@ -110,7 +110,7 @@ body{
 
 .icon{
     float: right;
-    margin-right: 100px;
+    margin-right: 200px;
     margin-top: 80px;
     width: 200px;
     height: 300px;
@@ -200,4 +200,17 @@ body{
     height: 100px;
     text-align: center;
     font-size: 17px;
+}
+
+
+
+@media screen and (max-width: 1480px) {
+
+#face{
+    opacity: 0.4;
+}
+
+#title{
+    right: 400px;
+}
 }
