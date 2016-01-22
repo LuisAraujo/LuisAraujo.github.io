@@ -39,13 +39,12 @@ hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1p
     src: url("../font/CODE%20Light.otf");
 }
 
-
+body, html{height: 100%}
 body{
     background-image: url(../assets/Background.jpg);
     padding: 0px;
     overflow: hidden;
 }
-
 
 
 #face{
@@ -63,113 +62,111 @@ body{
     position: absolute;
     right: 0;
     z-index: 999;
-    right: calc(50% - 350px);
+    right: calc(33%);
     top:20px;
     background-image: url(../assets/Titulo_home.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 500px;
-    width: 500px;
+    height: 35%;
+    width: 35%;
+
+
 }
 
 #mancha{
     position: absolute;
     top: 0;
-    right: -10px;
+    right: 0%;
     background-image: url(../assets/Mancha.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 300px;
-    width: 300px;
+    background-size: cover;
+    height: 30%;
+    width: 15%;
+
 }
 
 #div_01{
     width: 100%;
-    height: 350px;
+    height: 40%;
+
 }
 
 
 #div_02{
     width: 100%;
-    height: 280px;
+    height: 43%;
 
 }
 
 #div_03{
     width: 100%;
-    height: 100px;
+    height: 10%;
 
 }
 
 
 
 .icon:first-child{
-    margin-right: 300px;
+    margin-right: 10%;
 }
 .icon{
     float: right;
     margin-right: 130px;
     margin-top: 40px;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 193px;
     z-index: 999;
 }
-
+.icon:hover{
+    cursor: pointer;
+}
 
 #icon_programador{
-    background: url("../assets/botoes/Icon_programador.png");
-    background-size: contain;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: 0px 0px;
+    background-size: 550px; /*690px;*/
     background-repeat: no-repeat;
 }
 
 #icon_programador:hover{
-    cursor: pointer;
-    background: url("../assets/botoes/Icon_programador_over.png");
-    background-size: contain;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: 0px -194px;
+    background-size: 550px; /*690px;*/
     background-repeat: no-repeat;
 }
 
 
 #icon_ilustrador{
-    background: url("../assets/botoes/Icon_ilustrador.png");
-    background-size: contain;
+    width: 174px;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: -200px 0px;
+    background-size: 550px;
     background-repeat: no-repeat;
 }
 
 #icon_ilustrador:hover{
-    cursor: pointer;
-    background: url("../assets/botoes/Icon_ilustrador_over.png");
-    background-size: contain;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: -200px -194px;
+    background-size: 550px; /*690px;*/
     background-repeat: no-repeat;
 }
 
 
 
 #icon_gamedev{
-    background: url("../assets/botoes/Icon_gamedev.png");
-    background-size: contain;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: -374px 0px;
+    background-size: 550px; /*690px;*/
     background-repeat: no-repeat;
 }
 
 #icon_gamedev:hover{
-    cursor: pointer;
-    background: url("../assets/botoes/Icon_gamedev_over.png");
-    background-size: contain;
+    background: url("../assets/botoes/iconssheet.png");
+    background-position: -374px -194px;
+    background-size: 550px; /*690px;*/
     background-repeat: no-repeat;
 }
 
-#icon_professor{
-    background: url("../assets/botoes/Icon_professor.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#icon_professor:hover{
-    cursor: pointer;
-    background: url("../assets/botoes/Icon_professor_over.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
 
 #menu_redes{
@@ -202,194 +199,92 @@ body{
 
 
 
-@media screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+@media screen and (max-width: 1310px) {
 
     #face{
-        height: 480px;
-        opacity: 0.3;
+        opacity: 0.5;
     }
-
-
-    #title{
-        top: 10px;
-        right: 50px;
-        width: 220px;
-        height:150px;
-    }
-
-    #mancha{
-        display: none;
-    }
-    #div_01{
-        width: 100%;
-        height: 200px;
-    }
-
-
-    #div_02{
-        width: 100%;
-        height: 150px;
-    }
-
-    #div_03{
-        width: 100%;
-        height: 100px;
-    }
-    .icon:first-child{
-        margin-right: 10px;
-    }
-    .icon{
-        float: right;
-        margin-right: 10px;
-        margin-top: 20px;
-        width: 90px;
-        height: 90px;
-        z-index: 999;
-    }
-
-
-    #menu_redes{
-        font-size: 15px;
-        padding-right: 20px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 30px;
-    }
-
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
-    }
-
-    #footer{
-        font-size: 10px;
-    }
-
-
-
 }
 
-/*OK*/
-@media screen and (min-width: 1280px) and (min-height: 600px) and (orientation: landscape) {
-
-    #face{
-        height: 700px;
-    }
 
 
-    #title{
-       right: calc(45% - 200px);
-       width: 400px;
-       height:250px;
-    }
+@media screen and (max-width: 990px) {
 
 
-    #div_01{
-        width: 100%;
-        height: 250px;
-    }
-
-
-    #div_02{
-        width: 100%;
-        height: 270px;
-    }
-
-    #div_03{
-        width: 100%;
-        height: 50px;
-    }
     .icon:first-child{
-
-        margin-right: 200px;
+        margin-right: 10%;
     }
     .icon{
         float: right;
-        margin-right: 100px;
-        margin-top: 80px;
-        width: 130px;
-        height: 120px;
+        margin-right: 15%;
+        margin-top: 40px;
+        width: 150px;
+        height: 144px;
         z-index: 999;
     }
 
 
-    #menu_redes{
-        font-size: 15px;
-        padding-right: 50px;
-        color:#bebebe;
-
+    #icon_programador{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: 0px 0px;
+        background-size: 409px; /*690px;*/
+        background-repeat: no-repeat;
     }
 
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
+    #icon_programador:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: 0px -144px;
+        background-size: 409px; /*690px;*/
+        background-repeat: no-repeat;
     }
 
 
-}
-
-/* OK */
-@media screen and (min-height: 1280px) and (min-width: 600px) and (orientation: portrait){
-
-    #face{
-        height: 750px;
+    #icon_ilustrador{
+        width: 134px;
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -144px 0px;
+        background-size: 409px;
+        background-repeat: no-repeat;
     }
 
+    #icon_ilustrador:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -144px -144px;
+        background-size: 409px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+
+
+    #icon_gamedev{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -278px 0px;
+        background-size: 409px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+    #icon_gamedev:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -278px -144px;
+        background-size: 409px; /*690px;*/
+        background-repeat: no-repeat;
+    }
 
     #title{
-        top: 200px;
-        right: calc(50% - 250px);
-        width: 500px;
-        height:300px;
-    }
-
-    #mancha{
-        display: none;
-    }
-
-    #div_01{
-        width: 100%;
-        height: 800px;
-    }
-
-
-    #div_02{
-        width: 100%;
-        height: 250px;
-    }
-
-    #div_03{
-        width: 100%;
-        height: 150px;
-    }
-    .icon:first-child{
-        margin-right: 20px;
-    }
-    .icon{
-        float: right;
-        margin-right: 20px;
-        margin-top: 20px;
-        width: 170px;
-        height: 170px;
+        position: absolute;
+        right: 0;
         z-index: 999;
+        right: calc(27.5%);
+        top:10px;
+        background-image: url(../assets/Titulo_home.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 45%;
+        width: 45%;
     }
-
 
     #menu_redes{
-        font-size: 15px;
-        padding-right: 50px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 30px;
-    }
-
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
+        text-shadow: 1px 1px rgba(0,0,0,0.5);
     }
 
 }
@@ -397,254 +292,197 @@ body{
 
 
 
-/*  LAYOUT ALTO */
-/*OK*/
- @media screen and (min-width: 980px) and (min-height: 1280px) and (orientation: portrait){
+@media screen and (max-width: 822px) {
 
-    #face{
-        height: 750px;
-    }
-
-
-    #title{
-        top: 120px;
-        right: calc(33% - 200px);
-        width: 700px;
-        height:400px;
-    }
-
-
-    #div_01{
-        width: 100%;
-        height: 700px;
-    }
-
-
-    #div_02{
-        width: 100%;
-        height: 400px;
-    }
-
-    #div_03{
-        width: 100%;
-        height: 100px;
-    }
     .icon:first-child{
-        margin-right: 120px;
+        margin-right: 15%;
     }
+
     .icon{
-        float: right;
-        margin-right: 60px;
-        margin-top: 80px;
-        width: 200px;
-        height: 200px;
-        z-index: 999;
-    }
-
-
-    #menu_redes{
-        font-size: 20px;
-        padding-right: 50px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 140px;
-    }
-
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
-    }
-
-}
-
-@media screen and (min-height: 980px) and (min-width: 1280px) and (orientation: landscape){
-
-    #face{
-        height: 980px;
-    }
-
-
-    #title{
-        top: 50px;
-        right: calc(45% - 250px);
-        width: 500px;
-        height:300px;
-    }
-
-
-    #div_01{
-        width: 100%;
-        height: 400px;
-    }
-
-
-    #div_02{
-        width: 100%;
-        height: 400px;
-    }
-
-    #div_03{
-        width: 100%;
-        height: 100px;
-    }
-    .icon:first-child{
-        margin-right: 120px;
-    }
-    .icon{
-        float: right;
-        margin-right: 60px;
-        margin-top: 80px;
-        width: 200px;
-        height: 200px;
-        z-index: 999;
-    }
-
-
-    #menu_redes{
-        font-size: 20px;
-        padding-right: 50px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 100px;
-    }
-
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
+        margin-right: 10%;
     }
 
 }
 
 
-/* OK */
-@media screen and (min-height: 1920px) and (min-width: 900px) and (orientation: portrait){
 
-    #face{
-        height: 750px;
+
+@media screen and (max-width: 775px) {
+
+    .icon:first-child{
+        margin-right: 11%;
+    }
+
+    .icon{
+        margin-right: 10%;
+    }
+
+    #menu_redes{
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (max-width: 635px) {
+
+    body{
+        overflow: scroll;
     }
 
 
     #title{
-        top: 170px;
-        right: calc(33% - 200px);
-        width: 700px;
-        height:400px;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        right: calc(15%);
+        top:10px;
+        background-image: url(../assets/Titulo_home.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 70%;
+        width: 70%;
     }
+
 
 
     #div_01{
         width: 100%;
-        height: 700px;
+        height: 40%;
+
     }
 
 
     #div_02{
         width: 100%;
-        height: 1050px;
+        height: 120%;
+
     }
 
     #div_03{
         width: 100%;
-        height: 75px;
+        height: 10%;
+
     }
+
+
     .icon:first-child{
-        margin-right: 120px;
+        margin-right: auto;
+        margin-left: auto;
+
     }
+
     .icon{
         float: none;
-        margin-left: calc(50% - 150px);
-        margin-top: 20px;
-        width: 300px;
-        height: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px;
+        width: 200px;
+        height: 193px;
         z-index: 999;
     }
+    .icon:hover{
+        cursor: pointer;
+    }
 
+    #icon_programador{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: 0px 0px;
+        background-size: 550px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+    #icon_programador:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: 0px -194px;
+        background-size: 550px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+
+    #icon_ilustrador{
+        width: 174px;
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -200px 0px;
+        background-size: 550px;
+        background-repeat: no-repeat;
+    }
+
+    #icon_ilustrador:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -200px -194px;
+        background-size: 550px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+
+
+    #icon_gamedev{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -374px 0px;
+        background-size: 550px; /*690px;*/
+        background-repeat: no-repeat;
+    }
+
+    #icon_gamedev:hover{
+        background: url("../assets/botoes/iconssheet.png");
+        background-position: -374px -194px;
+        background-size: 550px; /*690px;*/
+        background-repeat: no-repeat;
+    }
 
     #menu_redes{
-        font-size: 20px;
+        text-shadow: none;
+        font-size: 15px;
         padding-right: 50px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 140px;
     }
 
     .bt_redes{
         float: right;
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
 }
 
 
+@media screen and (max-width: 340px) {
 
-
-
-/* OK */
-@media screen and (min-width: 1920px) and (min-height: 900px) and (orientation: landscape){
-
-    #face{
-        height: 900px;
+    #mancha{
+        display: none;
     }
 
-
-    #title{
-        top: 50px;
-        right: calc(45% - 250px);
-        width: 500px;
-        height:350px;
-    }
-    #title:hover{
-        opacity: 0.1;
-    }
 
     #div_01{
         width: 100%;
-        height: 400px;
+        height: 10%;
+
     }
 
 
     #div_02{
         width: 100%;
-        height: 340px;
+        height: 120%;
+
     }
 
     #div_03{
         width: 100%;
-        height: 100px;
+        height: 10%;
+
     }
-    .icon:first-child{
-        margin-right: 400px;
-    }
-    .icon{
-        float: right;
-        margin-right: 150px;
-        margin-top: 20px;
-        width: 200px;
-        height: 200px;
+
+    #title{
+        position: absolute;
+        right: 0;
         z-index: 999;
+        right: calc(5%);
+        top:5px;
+        background-image: url(../assets/Titulo_home.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 30%;
+        width: 30%;
     }
 
-
-    #menu_redes{
-        font-size: 20px;
-        padding-right: 50px;
-        color:#bebebe;
-
-    }
-    .bt_redes:first-child{
-        margin-right: 380px;
-    }
-
-    .bt_redes{
-        float: right;
-        margin-right: 30px;
-    }
 
 }
-

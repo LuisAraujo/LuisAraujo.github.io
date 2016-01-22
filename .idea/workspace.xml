@@ -26,7 +26,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="-9.807693" vertical-offset="561" max-vertical-offset="1411">
+            <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="1" selection-start="5002" selection-end="5002" vertical-scroll-proportion="0.9530387" vertical-offset="3917" max-vertical-offset="11152">
+            <state line="456" column="17" selection-start="8782" selection-end="8782" vertical-scroll-proportion="0.6008287" vertical-offset="7317" max-vertical-offset="8381">
               <folding />
             </state>
           </provider>
@@ -221,6 +221,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="61" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="10" selection-start="4569" selection-end="4569" vertical-scroll-proportion="0.0" vertical-offset="3917" max-vertical-offset="11152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22474">
           <folding />
         </state>
@@ -242,14 +270,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="-9.807693" vertical-offset="561" max-vertical-offset="1411">
+        <state line="48" column="8" selection-start="604" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="1" selection-start="5002" selection-end="5002" vertical-scroll-proportion="0.9530387" vertical-offset="3917" max-vertical-offset="11152">
+        <state line="456" column="17" selection-start="8782" selection-end="8782" vertical-scroll-proportion="0.6008287" vertical-offset="7317" max-vertical-offset="8381">
           <folding />
         </state>
       </provider>
