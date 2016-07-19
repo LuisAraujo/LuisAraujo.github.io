@@ -1,0 +1,86 @@
+body{
+    font-family: arial;
+    color: #444;
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border-collapse: collapse;
+}
+table td{
+    border: solid 1px #111;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+
+}
+#cabecario{
+    border-bottom: solid #aaaaaa 1px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+#menu{
+    float: left;
+    width: 15%;
+    height: 100%;
+    border-right: solid #aaaaaa 1px;
+}
+#menu a{
+    width: 100%;
+    display: block;
+
+}
+#menu .ativo{
+    color: #fff;
+    background-color: #0196D0;
+
+}
+#menu #principal{
+    padding-top:10px;
+    padding-bottom: 10px;
+    text-indent: 10px;
+}
+
+
+#menu #secundario{
+    border-top: solid #aaaaaa 1px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#menu #secundario h4{
+    margin-bottom: 4px;
+}
+
+.tabela_unidade .material{
+    text-align: center;
+}
+
+.unidade{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.conteiner{
+    padding: 10px;
+    width: 80%;
+    float: left;
+    font-size: 1em;
+}
+
+.conteiner h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+.conteiner h4{
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+h1,h2,h3,h4,h5{
+    margin-top: 0px;
+}
+
