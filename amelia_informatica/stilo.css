@@ -13,7 +13,14 @@ table td{
 }
 a{
     text-decoration: none;
+}
+a, a:visited{
+    color: #0196D0;
+}
 
+.back{
+    margin-top: 3px ;
+    color: #d05b54!important;
 }
 #cabecario{
     border-bottom: solid #aaaaaa 1px;
