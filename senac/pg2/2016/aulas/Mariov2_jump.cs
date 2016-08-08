@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+//renomei o arquivo para Mario.cs
 public class Mario : MonoBehaviour {
 
     //Atributo para guardar o componente RigidBody2D

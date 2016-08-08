@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class Mariov1 : MonoBehaviour {
+//renomei o arquivo para Mario.cs
+public class Mario : MonoBehaviour {
 
 
 	// É chamado na inicialização
