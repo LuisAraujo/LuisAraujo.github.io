@@ -17,6 +17,9 @@ public class Mario : MonoBehaviour {
 	bool isAttack;
 	bool isDefence;
 
+	//utilizado para o prefabs
+	public GameObject fogo;
+
 	// Use this for initialization
 	void Start () {
 		life = 100;
@@ -49,25 +52,22 @@ public class Mario : MonoBehaviour {
 			anim.SetBool("jump", isJump);
 		}
 
-		//Se pressionar o botao C ataque
+
 		if(Input.GetKeyDown(KeyCode.C)){
-			if((isAttack == false) && (isDefence == false)){
-				isAttack = true;
-				anim.SetBool("attack", isAttack);
-
-				//chamara a funçao "voltaEstadoNormal" em 0.5 seg.
-				Invoke("voltaEstadoNormal", 0.5f);
-			}
-
+             //Instancia o objeto com o Prefab de referência
+             GameObject g = Instantiate(fogo);
+             //Colocar o objeto em uma posição próxima ao Mário
+             g.transform.position = new Vector2(transform.position.x+0.2f, transform.position.y);
+             //para mudar a direção de acordo com a direção do Mario
+             g.transform.eulerAngles  = transform.eulerAngles;
 		}
 
-		//Se pressionar o botao X defenda
 		if (Input.GetKey (KeyCode.X)) {
 			if ((isAttack == false) && (isDefence == false)) {
 				isDefence = true;
 				anim.SetBool ("defence", isDefence);
 			}
-		//se nao estiver pressionando e estiver no modo defesa
+
 		} else if (isDefence) {
 			isDefence = false;
 			anim.SetBool ("defence", isDefence);
@@ -81,9 +81,6 @@ public class Mario : MonoBehaviour {
 			}
 
 		}
-
-
-
 	}
 
 	void Pular(){
@@ -104,7 +101,6 @@ public class Mario : MonoBehaviour {
 		}
 	}
 
-	//funçao chamanda por invoke
 	void voltaEstadoNormal(){
 		isAttack = false;
 		anim.SetBool("attack", isAttack);
@@ -120,20 +116,12 @@ public class Mario : MonoBehaviour {
 			anim.SetBool ("mini", mini);
 			anim.Play ("MarioTransition");
 
-	    //Se o objeto que colidiu não tiver a tag cogumelo, mas tiver a tag inimigo
 		} else if (objeto.tag == "inimigo") {
-			//pegando o valor do dano (Inimigo e a mesma classe que Folha, apenas mudei o nome)
 			float dano= objeto.GetComponent<Inimigo>().dano;
-
-			//se estiver no modo ataque
 			if(isAttack == true){
-				//toma metade do dano
 				life = life - (dano/2);
 				Destroy (objeto.gameObject);
-
-		    //senao estiver no modo ataque e nem no defesa
 			}else if(isDefence == false){
-				//toma dano total
 				life = life - dano;
 			}
 
