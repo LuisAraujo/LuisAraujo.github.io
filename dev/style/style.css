@@ -69,9 +69,21 @@ body{
     background-size: contain;
     height: 35%;
     width: 35%;
-
-
 }
+
+
+#title2{
+    position: absolute;
+    z-index: 999;
+    left: 2%;
+    top:20px;
+    background-image: url(../assets/Titulo_home.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10%;
+    width: 10%;
+}
+
 
 #mancha{
     position: absolute;
@@ -85,17 +97,43 @@ body{
 
 }
 
+
+
+#mancha2{
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    background-image: url(../assets/Mancha.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30%;
+    width: 15%;
+	
+	 	 -moz-transform: scale(-1, -1);
+     -o-transform: scale(-1, -1);
+     -webkit-transform: scale(-1, -1);
+     transform: scale(-1, -1);
+     filter: FlipH;
+     -ms-filter: "FlipH";
+
+}
+
+
 #div_01{
     width: 100%;
     height: 40%;
 
 }
 
+#div_01b{
+    width: 100%;
+    height: 10%;
+
+}
 
 #div_02{
     width: 100%;
     height: 43%;
-
 }
 
 #div_03{
@@ -104,7 +142,10 @@ body{
 
 }
 
-
+#div_04{
+    width: 100%;
+    height: 43%;
+}
 
 .icon:first-child{
     margin-right: 10%;
@@ -116,9 +157,38 @@ body{
     width: 200px;
     height: 193px;
     z-index: 999;
+	-webkit-filter: grayscale(50%);
+   -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+     -o-filter: grayscale(50%);
+	filter: grayscale(50%);
 }
 .icon:hover{
     cursor: pointer;
+	-webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+     -o-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+.icon_jogo{
+    float: left;
+    margin-left: 15%;
+    margin-top: 0px;
+   
+    z-index: 999;
+	-webkit-filter: grayscale(50%);
+   -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+     -o-filter: grayscale(50%);
+	filter: grayscale(50%);
+	
+    background-position: 0px 0px;
+    background-size: 550px; 
+    background-repeat: no-repeat;
+	width: 185px;
+    height: 178px;
 }
 
 #icon_programador{
@@ -128,13 +198,14 @@ body{
     background-repeat: no-repeat;
 }
 
+/*
 #icon_programador:hover{
     background: url("../assets/botoes/iconssheet.png");
     background-position: 0px -194px;
-    background-size: 550px; /*690px;*/
+    background-size: 550px; 
     background-repeat: no-repeat;
 }
-
+*/
 
 #icon_ilustrador{
     width: 174px;
@@ -143,30 +214,31 @@ body{
     background-size: 550px;
     background-repeat: no-repeat;
 }
-
+/*
 #icon_ilustrador:hover{
     background: url("../assets/botoes/iconssheet.png");
     background-position: -200px -194px;
-    background-size: 550px; /*690px;*/
+    background-size: 550px; 
     background-repeat: no-repeat;
 }
 
-
+*/
 
 #icon_gamedev{
     background: url("../assets/botoes/iconssheet.png");
     background-position: -374px 0px;
-    background-size: 550px; /*690px;*/
+    background-size: 550px; 
     background-repeat: no-repeat;
 }
 
+/*
 #icon_gamedev:hover{
     background: url("../assets/botoes/iconssheet.png");
     background-position: -374px -194px;
-    background-size: 550px; /*690px;*/
+    background-size: 550px; 
     background-repeat: no-repeat;
 }
-
+*/
 
 
 #menu_redes{
@@ -189,6 +261,8 @@ body{
 
 
 #footer{
+    position: fixed;
+	bottom:1px;
     font-family: Code;
     font-weight: normal;
     width: 100%;
@@ -214,6 +288,7 @@ body{
     .icon:first-child{
         margin-right: 10%;
     }
+	
     .icon{
         float: right;
         margin-right: 15%;
@@ -224,17 +299,21 @@ body{
     }
 
 
+	.icon_jogo{
+	 float: left;
+    margin-left: 15%;
+    margin-top: 0px;
+		background-position: 0px 0px;
+		background-size: 409px;
+		background-repeat: no-repeat;
+		width: 185px;
+		height: 178px;
+	}
+
     #icon_programador{
         background: url("../assets/botoes/iconssheet.png");
         background-position: 0px 0px;
-        background-size: 409px; /*690px;*/
-        background-repeat: no-repeat;
-    }
-
-    #icon_programador:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: 0px -144px;
-        background-size: 409px; /*690px;*/
+        background-size: 409px;
         background-repeat: no-repeat;
     }
 
@@ -247,28 +326,17 @@ body{
         background-repeat: no-repeat;
     }
 
-    #icon_ilustrador:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: -144px -144px;
-        background-size: 409px; /*690px;*/
-        background-repeat: no-repeat;
-    }
-
+  
 
 
     #icon_gamedev{
         background: url("../assets/botoes/iconssheet.png");
         background-position: -278px 0px;
-        background-size: 409px; /*690px;*/
+        background-size: 409px;
         background-repeat: no-repeat;
     }
 
-    #icon_gamedev:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: -278px -144px;
-        background-size: 409px; /*690px;*/
-        background-repeat: no-repeat;
-    }
+  
 
     #title{
         position: absolute;
@@ -385,6 +453,15 @@ body{
         cursor: pointer;
     }
 
+	
+	.icon_jogo{
+		background-position: 0px 0px;
+		background-size: 450px;
+		background-repeat: no-repeat;
+		width: 185px;
+		height: 178px;
+	}
+	
     #icon_programador{
         background: url("../assets/botoes/iconssheet.png");
         background-position: 0px 0px;
@@ -392,12 +469,7 @@ body{
         background-repeat: no-repeat;
     }
 
-    #icon_programador:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: 0px -194px;
-        background-size: 550px; /*690px;*/
-        background-repeat: no-repeat;
-    }
+  
 
 
     #icon_ilustrador{
@@ -408,13 +480,7 @@ body{
         background-repeat: no-repeat;
     }
 
-    #icon_ilustrador:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: -200px -194px;
-        background-size: 550px; /*690px;*/
-        background-repeat: no-repeat;
-    }
-
+ 
 
 
     #icon_gamedev{
@@ -424,13 +490,7 @@ body{
         background-repeat: no-repeat;
     }
 
-    #icon_gamedev:hover{
-        background: url("../assets/botoes/iconssheet.png");
-        background-position: -374px -194px;
-        background-size: 550px; /*690px;*/
-        background-repeat: no-repeat;
-    }
-
+ 
     #menu_redes{
         text-shadow: none;
         font-size: 15px;
