@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Quem Votou? </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="style/bootstrap.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+<div id="a">aaa</div>
+<div id="t">aaa</div>
+<div style="background-color:#525252; height:290px; overflow: hidden; height:100px; absolute:top: 0;  background-image: url('brasilia_esq.jpg'); background-size: 100% 100px; background-repeat: no-repeat;">
+    <div style="background-image: url('brasilia.jpg'); background-size:  100% 100px;  background-repeat: no-repeat; width: 200px; height:290px">
+    <img style="position: absolute;  left: calc(50% - 125px); width: 250px; margin: 10px" src="logo.png">
+</div>
+
+</div>
+<div class="row">
+<div id="menu-lateral" class="col-md-3"  style="border-right: 1px solid #adadad">
+<h3> Quem Votou? </h3>
+
+<div class="radio">
+    <label><input type="radio" id="op-cam-dep" name="optradio">Cam. dos Deputados</label>
+</div>
+<div class="radio">
+    <label><input type="radio" id="op-sen" name="optradio">Senado</label>
+</div>
+
+<br>
+<div  id="select-tema" class="form-group">
+    <label for="usr">Selecione o Tema da Votação*:</label>
+    <input id="inp-select-tema" disabled type="text" class="form-control" id="usr">
+    <div id="cont-item-tema"></div>
+
+</div>
+
+<br>
+<span> Deseja filtrar resultado? </span> <br>
+<span style="font-size: 10px">(Essa função ainda não foi implementada)</span>
+<br>
+
+<div class="radio">
+    <label><input disabled type="radio" name="optradioFiltro">UF</label>
+</div>
+<div class="radio">
+    <label><input disabled type="radio" name="optradioFiltro">Partido</label>
+</div>
+
+
+<div id="selectUF" class="input-group">
+    Selecione uma UF:
+    <br>
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button">UF</button>
+    </span>
+    <input type="text" class="form-control" placeholder="Selecione a UF">
+</div><!-- /input-group -->
+<br>
+
+<div id="selectPartido" class="input-group">
+  Selecione o Partido:
+  <br>
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Partido</button>
+  </span>
+  <input type="text" class="form-control" placeholder="Selecione o Partido">
+</div><!-- /input-group -->
+
+<button id="bt-pesquisa" disabled type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Pesquisar <span class="caret"></span>
+</button>
+
+<h3> Contato </h3>
+Sugestões, novas listas e <i>feedbacks</i>: luisaraujo.ifba@gmail.com
+
+<h4>Créditos</h4>
+Imagens Deputados <a target="_blank" href="https:/goo.gl/sxkHzM">Lista Dep. em Wikipédia</a>
+Imagens Senadores - <a target="_blank" href="https:/goo.gl/J1RLSF">Lista Sen. em Wikipédia</a>
+Ilustração do Congresso Nacional por <a  target="_blank" href="https://pt.wikipedia.org/wiki/Oscar_Niemeyer">Oscar Niemeyer</a>
+</div>
+
+<div class="col-md-8"  >
+   <div id="titulo-tema"><h2> Tema em Votação </h2></div>
+
+   <div id="div-nao">
+
+   <h3 class="title"> <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>  Não </h3>
+       <div id="c-div-nao">
+
+       </div>
+   </div>
+
+
+   <div id="div-sim">
+   <h3 class="title"> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Sim </h3>
+       <div id="c-div-sim">
+
+       </div>
+   </div>
+
+
+    <div id="div-abs">
+        <h3 class="title"> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Abstenção </h3>
+        <div id="c-div-abs">
+
+
+        </div>
+    </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
