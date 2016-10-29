@@ -1,7 +1,7 @@
 var UF = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG', 'PR', 'PB', 'PA', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SE', 'SP','TO'];
 var listaDep = [];
 var votacaoTema = [];
-var listTemasDep = [{tema:"PEC 241"}];
+var listTemasDep = [{tema:"PEC 241", legislatura:"55"}];
 var listTemasSen = [];
 var baseCargoAtual = "";
 var temaBuscaAtual = "";
@@ -23,6 +23,7 @@ $(document).ready( function(){
     });
 
     $("#bt-pesquisa").click(function(){
+        $("#div-proj").hide();
         setTema(temaBuscaAtual, baseCargoAtual, showVotoTema);
     });
 
