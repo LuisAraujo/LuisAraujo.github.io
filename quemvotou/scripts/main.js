@@ -1,7 +1,7 @@
 var UF = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG', 'PR', 'PB', 'PA', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SE', 'SP','TO'];
 var listaDep = [];
 var votacaoTema = [];
-var listTemasDep = [{tema:"PEC 241", legislatura:"55"}];
+var listTemasDep = [{tema:"PEC 241", legislatura:"55", link:"https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=pec%20241"}];
 var listTemasSen = [];
 var baseCargoAtual = "";
 var temaBuscaAtual = "";
@@ -27,7 +27,7 @@ $(document).ready( function(){
     $("#bt-pesquisa").click(function(){
         $("#div-proj").hide();
         setTema(temaBuscaAtual, baseCargoAtual, showVotoTema);
-        alert("Aviso: a base de dados esta sendo populado - Cadastrados apenas Deputados dos Estado: AC, AL e AP. Além da Mesa Diretora.");
+        $("#modal-aviso").modal();
     });
 
     $("#inp-select-tema").bind('input propertychange', function(){
@@ -64,17 +64,16 @@ function setDepList(){
 
 function setTema(tema,cargo, cb){
     votacaoTema = [];
-    $("#t").load("listaTema/"+cargo+"/list"+tema.replace(/\s/g,'')+".html", function(){
+    $("#t").load("listaTema/"+cargo+"/list"+listTemasDep[tema].tema.replace(/\s/g,'')+".html", function(){
         text = document.getElementById("t").innerText.toString();
         var lines = text.split(';');
 
         for(var i = 0; i < lines.length-1; i++){
             attr = lines[i].split(',');
             votacaoTema.push( {nome:attr[0], voto:attr[1]});
-            console.log(votacaoTema[votacaoTema.length-1]);
         }
 
-        $("#titulo-tema").html("<h2>"+tema+"</h2>");
+        $("#titulo-tema").html("<h2>"+listTemasDep[tema].tema+"</h2> <a target='_blank' href='"+listTemasDep[tema].link+"'> Deseja saber mais?</a> | ");
         $("#div-sim").show();
         $("#div-nao").show();
         $("#div-abs").show();
@@ -95,6 +94,7 @@ function showVotoTema(list, cargo){
 
     for(var i=0; i<list.length; i++){
         var d = getDados(list[i].nome, cargo);
+        console.log(d, list[i].nome)
         var img = d.imagem.replace(/\s/g,'');
         var urlimg = "listasPoliticos/"+cargo+"/"+getAtuallegislatura('dep')+"/images/"+img;
         var partido = d.part;
@@ -114,13 +114,14 @@ function showVotoTema(list, cargo){
     strSim += '<div style="clear: both;"></div>';
     strNao += '<div style="clear: both;"></div>';
     strAbs += '<div style="clear: both;"></div>';
+    console.log($("#cont-votos").css("height"));
 
     $("#titulo-tema").append(" Sim: "+qtdsim+" | Não:"+qtdnao);
     $("#c-div-sim").html(strSim);
     $("#c-div-nao").html(strNao);
     $("#c-div-abs").html(strAbs);
 
-
+    $("#menu-lateral").height($("#cont-votos").css("height"));
 
 }
 
@@ -157,13 +158,13 @@ function  buscaTemas(val){
         for(var i=0; i<listTemasDep.length; i++){
             flag = true;
             for(var j=0; j< val.length; j++){
-                if(listTemasDep[i].tema.charAt(j) != val.charAt(j)){
+                if(listTemasDep[i].tema.charAt(j).toUpperCase() != val.charAt(j).toUpperCase()){
                     flag = false;
                     break
                 }
             }
             if(flag == true){
-                arrReturn.push(listTemasDep[i].tema)
+                arrReturn.push({id:i, tema:listTemasDep[i].tema})
             }
         }
     }else  if(baseCargoAtual == "sen"){
@@ -176,28 +177,27 @@ function  buscaTemas(val){
                 }
             }
             if(flag == true){
-                arrReturn.push(listTemasSen[i].tema)
+                arrReturn.push({id:i, tema:listTemasSen[i].tema})
             }
         }
     }
-
-
 
     showListTema (arrReturn);
 }
 
 
 function showListTema(list){
+
     $("#cont-item-tema").html("");
     for(var i=0; i<list.length; i++){
-       $("#cont-item-tema").append('<span class="item-tema" >'+list[i]+'</span>');
+       $("#cont-item-tema").append('<span idtema="'+list[i].id+'"class="item-tema" >'+list[i].tema+'</span>');
     }
 
     $("#cont-item-tema").show();
 
-    $("#cont-item-tema").click(function(){
-        temaBuscaAtual =  $(this).text()
-        $("#inp-select-tema").val(temaBuscaAtual);
+    $(".item-tema").click(function(){
+        temaBuscaAtual = $(this).attr("idtema");
+        $("#inp-select-tema").val($(this).text());
         $("#bt-pesquisa").removeAttr("disabled");
         $("#cont-item-tema").hide();
     });

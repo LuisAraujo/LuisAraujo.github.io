@@ -9,7 +9,8 @@ body{
 
 #menu-lateral{
     margin-left: 10px !important;
-    height: 100%;
+    display: block;
+
 }
 
 .cont-dep{
