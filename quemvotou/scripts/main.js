@@ -5,6 +5,8 @@ var listTemasDep = [{tema:"PEC 241", legislatura:"55"}];
 var listTemasSen = [];
 var baseCargoAtual = "";
 var temaBuscaAtual = "";
+var qtdnao=0;
+var qtdsim=0;
 
 $(document).ready( function(){
     for(var i=0; i<UF.length; i++)
@@ -25,14 +27,20 @@ $(document).ready( function(){
     $("#bt-pesquisa").click(function(){
         $("#div-proj").hide();
         setTema(temaBuscaAtual, baseCargoAtual, showVotoTema);
+        alert("Aviso: a base de dados esta sendo populado - Cadastrados apenas Deputados dos Estado: AC, AL e AP. Além da Mesa Diretora.");
     });
 
     $("#inp-select-tema").bind('input propertychange', function(){
         $("#bt-pesquisa").attr("disabled","");
+        qtdnao =0;
+        qtdsim=0;
         buscaTemas($(this).val());
+
+
     });
 
     $("#cont-item-tema").hide();
+
 
 
 
@@ -93,8 +101,10 @@ function showVotoTema(list, cargo){
         var uf = d.uf
 
         if(list[i].voto == "Sim"){
+            qtdsim++;
             strSim += '<div class="cont-dep"><div style = "background-image: url('+urlimg+')"  class="dep a" ></div><span>'+list[i].nome+" - "+d.part +'/'+ d.uf+'</span> </div>';
         }else if(list[i].voto == "Não"){
+            qtdnao++;
             strNao += '<div class="cont-dep"><div style = "background-image: url('+urlimg+')" class="dep a" ></div><span>'+list[i].nome+" - "+d.part +'/'+ d.uf+'</span> </div>';
         }else if(list[i].voto == "Abs"){
             strAbs += '<div class="cont-dep"><div style = "background-image: url('+urlimg+')" class="dep a" ></div><span>'+list[i].nome+" - "+d.part +'/'+ d.uf+'</span> </div>';
@@ -105,7 +115,7 @@ function showVotoTema(list, cargo){
     strNao += '<div style="clear: both;"></div>';
     strAbs += '<div style="clear: both;"></div>';
 
-
+    $("#titulo-tema").append(" Sim: "+qtdsim+" | Não:"+qtdnao);
     $("#c-div-sim").html(strSim);
     $("#c-div-nao").html(strNao);
     $("#c-div-abs").html(strAbs);
@@ -127,7 +137,7 @@ function getDados(politico, cargo){
         }
     }
 
-    return "";
+    return {imagem: "Dep.jpg", part: "NULL", uf: "NULL"};
 
 }
 

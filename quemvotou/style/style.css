@@ -4,6 +4,7 @@ body{
   background-color: #fff;
   margin-top: 0px;
   overflow-x: hidden;
+
 }
 
 #menu-lateral{
@@ -13,7 +14,7 @@ body{
 
 .cont-dep{
     width: 100px;
-    height: 100px;
+    height: 130px;
     margin-left: 10px;
     float: left;
     text-align: center !important;
@@ -25,6 +26,7 @@ body{
     height: 50px;
     background-size: 100%;
     margin-left: calc(50% - 25px);
+    display: block;
 
 }
 
