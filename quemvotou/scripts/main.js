@@ -9,6 +9,20 @@ var qtdnao=0;
 var qtdsim=0;
 
 $(document).ready( function(){
+
+    $(window).click(function(evt) {
+        console.log("d");
+        if ((evt.target.id != "bt-menu-princ") && (evt.target.id != "bt-menu-icon-princ")){
+                $("#menu-princ").hide("fast");
+        }else if( $("#menu-princ").css("display") != "none"){
+            $("#menu-princ").hide("fast");
+        }else{
+            $("#menu-princ").show("fast");
+        }
+
+    });
+
+
     for(var i=0; i<UF.length; i++)
         $("#ul-list-uf").append('<li><a  href="#">'+UF[i]+'</a></li>');
 

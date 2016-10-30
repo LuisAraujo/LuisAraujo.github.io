@@ -10,7 +10,7 @@ body{
 #menu-lateral{
     margin-left: 10px !important;
     display: block;
-
+    height: calc(100% - 130px );
 }
 
 .cont-dep{
@@ -94,4 +94,97 @@ body{
 
 #div-infos .s{
     margin-left: 10px;
+}
+
+#head{
+    height:100px;
+    width: 100%;
+    border-bottom: 10px solid #182544;
+    overflow: hidden;
+
+    absolute:top: 0;
+    padding: 5px;
+    padding-left: 15px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f539b+0,2763a3+50,0f539b+100 */
+    background: #0f539b; /* Old browsers */
+    background: -moz-linear-gradient(top, #1170c4 0%, #2c74bc 50%, #0f64b0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1170c4 0%, #2c74bc 50%, #0f64b0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #104480 0%, #1b4670 50%, #0a3059 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f539b', endColorstr='#0f539b',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+#logo-head{
+    width: 200px;
+    left: calc(50% - 100px);
+
+    position: relative;
+}
+
+#foot{
+    height: 30px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.menu{
+    width: 270px;
+    position: absolute;
+    left: 30px;
+    top:60px;
+    z-index: 9999;
+    display: none;
+}
+
+.menu img{
+    position: absolute;
+    left: 0px;
+    height: 15px;
+    z-index: 99;
+}
+
+#bt-menu-princ2{
+    z-index: 98;
+    position: relative;
+    top:15px;
+    width: 200px;
+    height: 135px;
+    display: block;
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+#bt-menu-princ2 .navbar-brand{
+    font-size: 15px !important;
+    height:  30px;
+    width: 100%;
+    padding: 5px;
+    color:  #375988;
+}
+
+#bt-menu-princ2 .navbar-brand:hover{
+    background-color: #375988;
+    color: #fff;
+}
+
+#head-menu{
+    position: absolute;
+    height:30px;
+    width: 100%;
+    left: 0px;
+    top:0px;
+    text-indent: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #375988;
+    border-bottom: 1px solid #333;
+}
+
+#cont-menu{
+    position: absolute;
+    top: 40px; display: block; height: 200px
 }
