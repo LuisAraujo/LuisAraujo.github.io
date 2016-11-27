@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap Core CSS -->
+  <link href="../style/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  <style>
+      #navbarmain {
+          border-bottom: 10px solid #fff;
+
+          background-color: rgb(41, 180, 60);
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          color: rgb(253, 251, 251);
+
+      }
+
+      .navbar-default .navbar-nav > li > a:hover{
+           color: rgb(190, 193, 203) !important;
+      }
+
+
+      #title{
+          color: rgb(251, 255, 255);
+          text-shadow: 0px 0px 7px rgb(22, 75, 38);
+      }
+	  
+	  a.disabled {
+			pointer-events: none;
+			color: rgb(50, 70, 50) !important;
+		}
+  </style>
+</head>
+
+
+
+  <body style="padding: 10px">
+
+  <nav id="navbarmain" class="navbar navbar-default navbar-fixed-top" role="navigation" >
+        <div class="container">
+
+
+            <div id="title" class="navbar-header page-scroll">
+                <h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Computação com Mídias</h2>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  style="float:right;" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul  class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li  class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+					 <li>
+                        <a class="page-scroll" href="../" ><h4>home</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll disabled" href="#" ><h4>biblioteca</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../exemplos"><h4>exemplos</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../aprenda"><h4>aprenda</h4></a>
+                    </li>
+					<li>
+                        <a class="page-scroll " href="../ensine"><h4>ensine</h4></a>
+                    </li>
+                    <li>
+                        <a  class="page-scroll" href="../sobre"><h4>sobre</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+  <div class="container" style="margin-top: 70px">
+    <h3> Como instalar </h3>
+    <div>
+        A biblioteca MediaComp usa a biblioteca Pillow para as funções de imagem, assim é preciso instalar a biblioteca Pillow.
+		<br><br>
+		<b>Passos:</b>
+		<ul>
+			<li>Instalar  a Pillow;li>
+			<li>Copie a pasta mediacomp para a sua pasta de bibliotecas python;</li>
+			<li>Importe a biblioteca MediaComp para o seu arquivo (veja nos exemplos).</li>
+			
+		</ul>
+    </div>
+   
+   <h3> Download </h3>
+    <div>
+     Faça o Download da última versão da biblioteca MediaComp
+      <br><br>
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon glyphicon-save-file" aria-hidden="true"> </span> Dowload versão 0.1</button>
+
+    </div>
+
+	<h3> Notas </h3>
+    <div>
+		<b>Imagens</b>
+		<ul>
+			<li>Todas as funções, exceto <i>pickColor</i> e <i>repaint</i>, implementadas.</li>
+			<li>A função <i>show</i> e <i>explore</i> usam a Thread principal.</li>
+		</ul>
+      <b>Sons</b>
+		<ul>
+			<li>Nenhuma função implementadas.</li>
+		</ul>
+     <b>Videos</b>
+		<ul>
+			<li>Nenhuma função implementadas.</li>
+		</ul>
+    </div>
+	
+	
+  </div>
+  
+
+  <!-- MODAL SOBRE-->
+      <div class="modal fade" id="modal-erro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h2><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                      Erro 404 - Not found</h2>
+                  </div>
+                  <div class="modal-body">
+
+                    Ocorreu um erro ao tentar acessar os arquvos. Por favor, verifique o diretório!
+
+                  </div>
+                  <div class="modal-footer">
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

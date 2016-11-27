@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap Core CSS -->
+  <link href="../style/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  <style>
+      #navbarmain {
+          border-bottom: 10px solid #fff;
+
+          background-color: rgb(41, 180, 60);
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          color: rgb(253, 251, 251);
+
+      }
+
+      .navbar-default .navbar-nav > li > a:hover{
+           color: rgb(190, 193, 203) !important;
+      }
+
+
+      #title{
+          color: rgb(251, 255, 255);
+          text-shadow: 0px 0px 7px rgb(22, 75, 38);
+      }
+	  
+	  a.disabled {
+			pointer-events: none;
+			color: rgb(50, 70, 50) !important;
+		}
+  </style>
+</head>
+
+
+
+  <body style="padding: 10px">
+
+  <nav id="navbarmain" class="navbar navbar-default navbar-fixed-top" role="navigation" >
+        <div class="container">
+
+
+            <div id="title" class="navbar-header page-scroll">
+                <h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Computação com Mídias</h2>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  style="float:right;" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul  class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li  class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+					 <li>
+                        <a class="page-scroll" href="../" ><h4>home</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../biblioteca" ><h4>biblioteca</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll disabled" href="#"><h4>exemplos</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../aprenda"><h4>aprenda</h4></a>
+                    </li>
+					<li>
+                        <a class="page-scroll " href="../ensine"><h4>ensine</h4></a>
+                    </li>
+                    <li>
+                        <a  class="page-scroll" href="../sobre"><h4>sobre</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+  <div class="container" style="margin-top: 70px">
+<h3> Exemplos - Imagens </h3>
+
+<h4> Efeito Escala de Cinza</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertGS.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b;"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span> 
+
+picture<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+
+<span style="color:#069;font-weight:700">for</span> px <span style="color:#069;font-weight:700">in</span> getPixels(picture): 
+	novoVermelho <span style="color:#069;font-weight:700">=</span> getRed(px) <span style="color:#069;font-weight:700">*</span> <span style="color:#a8017e">0.29</span>9
+	novoVerde <span style="color:#069;font-weight:700">=</span> getGreen(px) <span style="color:#069;font-weight:700">*</span> <span style="color:#a8017e">0.58</span>7
+	novoAzul <span style="color:#069;font-weight:700">=</span> getBlue(px) <span style="color:#069;font-weight:700">*</span> <span style="color:#a8017e">0.11</span>4
+	luminancia <span style="color:#069;font-weight:700">=</span> novoVermelho<span style="color:#069;font-weight:700">+</span>novoVerde<span style="color:#069;font-weight:700">+</span>novoAzul
+	setColor(px,makeColor(luminancia,luminancia,luminancia))
+	
+show(picture)
+</pre>
+</div>			
+</div>
+
+
+
+<h4> Efeito Espelhado</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertMir.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span>
+
+imagem <span style="color:#069;font-weight:700">=</span> picture<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+pontoespelhamento <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">int</span>(getWidth(imagem)<span style="color:#069;font-weight:700">/</span><span style="color:#a8017e">2</span>)
+
+<span style="color:#069;font-weight:700">for</span> y <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>,getHeight(imagem)):
+    <span style="color:#069;font-weight:700">for</span> x <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>,pontoespelhamento):
+        p <span style="color:#069;font-weight:700">=</span> getPixel(imagem, x<span style="color:#069;font-weight:700">+</span>pontoespelhamento,y)
+        p2 <span style="color:#069;font-weight:700">=</span> getPixel(imagem, pontoespelhamento<span style="color:#069;font-weight:700">-</span>x,y)
+        setColor(p,makeColor(getRed(p2), getGreen(p2), getBlue(p2)))
+
+show(imagem)
+</pre>
+</div>			
+</div>
+</div>	
+
+
+<h4> Textos, Linhas e Retângulos</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertTxt.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span>
+
+imagem<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+cor <span style="color:#069;font-weight:700">=</span> makeColor(<span style="color:#a8017e">255</span>,<span style="color:#a8017e">255</span>,<span style="color:#a8017e">255</span>)
+
+addRectFilled(imagem,  cor, <span style="color:#a8017e">10</span>, <span style="color:#a8017e">300</span>, <span style="color:#a8017e">30</span>, <span style="color:#a8017e">310</span>)
+addText(imagem, cor, <span style="color:#a8017e">70</span>, <span style="color:#a8017e">300</span>, <span style="color:#666">"Seymour Papert"</span>)
+addRectFilled(imagem, cor , <span style="color:#a8017e">200</span>, <span style="color:#a8017e">300</span>, <span style="color:#a8017e">220</span>, <span style="color:#a8017e">310</span>)
+addLine(imagem, cor, <span style="color:#a8017e">30</span>, <span style="color:#a8017e">300</span>, <span style="color:#a8017e">200</span>, <span style="color:#a8017e">300</span>)
+addLine(imagem, cor, <span style="color:#a8017e">30</span>, <span style="color:#a8017e">310</span>, <span style="color:#a8017e">200</span>, <span style="color:#a8017e">310</span>)
+
+show(imagem)
+</pre>
+</div>			
+</div>
+</div>
+
+
+<h4> Efeito Preto e Branco</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertBW.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span>
+
+imagem<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+
+<span style="color:#069;font-weight:700">for</span> x <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>, getWidth(imagem)):
+    <span style="color:#069;font-weight:700">for</span> y <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>, getHeight(imagem)):
+        p <span style="color:#069;font-weight:700">=</span> getPixel(imagem, x, y)
+        <span style="color:#069;font-weight:700">if</span> ((getRed(p) <span style="color:#069;font-weight:700">+</span> getBlue(p) <span style="color:#069;font-weight:700">+</span> getGreen(p)) <span style="color:#069;font-weight:700">/</span> <span style="color:#a8017e">255</span> <span style="color:#069;font-weight:700">&lt;</span> <span style="color:#a8017e">1</span>):
+            setColor(p, makeColor(<span style="color:#a8017e">0</span>, <span style="color:#a8017e">0</span>, <span style="color:#a8017e">0</span>))
+        <span style="color:#069;font-weight:700">else</span>:
+            setColor(p, makeColor(<span style="color:#a8017e">255</span>, <span style="color:#a8017e">255</span>, <span style="color:#a8017e">255</span>))
+
+show(imagem)
+</pre>
+</div>			
+</div>
+</div>
+
+
+<h4> Efeito Negativos</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertNegative.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span>
+
+imagem<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+
+<span style="color:#069;font-weight:700">for</span> px <span style="color:#069;font-weight:700">in</span> getPixels(imagem):
+    red <span style="color:#069;font-weight:700">=</span> getRed(px)
+    green <span style="color:#069;font-weight:700">=</span> getGreen(px)
+    blue <span style="color:#069;font-weight:700">=</span> getBlue(px)
+    negColor <span style="color:#069;font-weight:700">=</span> makeColor(<span style="color:#a8017e">255</span> <span style="color:#069;font-weight:700">-</span> red, <span style="color:#a8017e">255</span> <span style="color:#069;font-weight:700">-</span> green, <span style="color:#a8017e">255</span> <span style="color:#069;font-weight:700">-</span> blue)
+    setColor(px, negColor)
+
+show(imagem)
+</pre>
+</div>			
+</div>
+</div>
+
+
+<h4> Efeito Chromakey</h4>
+<div>
+<div class="row">
+
+<div class="col-md-4 col-xs-8">
+	<a href="#" class="thumbnail">
+	<img alt="100%x180" data-src="holder.js/100%x180" src="../images/papertChromakey.png" data-holder-rendered="true" style="height: 250px; width: 100%; display: block;">
+	</a>
+</div>
+<div class="col-md-7 col-xs-14" style="height:250px; overflow:scroll">
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">from</span> mediacomp.image <span style="color:#069;font-weight:700">import</span>  <span style="color:#069;font-weight:700">*</span>
+
+imagem<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+fundo<span style="color:#069;font-weight:700">=</span>makePicture(pickAFile())
+
+<span style="color:#069;font-weight:700">for</span> x <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>, getWidth(imagem)):
+    <span style="color:#069;font-weight:700">for</span> y <span style="color:#069;font-weight:700">in</span> <span style="color:#45ae34;font-weight:700">range</span>(<span style="color:#a8017e">1</span>, getHeight(imagem)):
+        p <span style="color:#069;font-weight:700">=</span> getPixel(imagem, x, y)
+        <span style="color:#069;font-weight:700">if</span> (getRed(p) <span style="color:#069;font-weight:700">+</span> getBlue(p) <span style="color:#069;font-weight:700">&lt;</span> getGreen(p)):
+            setColor(p, getColor(getPixel(fundo, x, y)))
+
+show(imagem)
+
+</pre>
+</div>			
+</div>
+</div>
+
+
+</div>
+  
+
+ 
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
