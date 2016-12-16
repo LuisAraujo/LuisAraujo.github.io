@@ -68,15 +68,24 @@ $(document).ready( function(){
         vars = data.split("&");
         tema = vars[0].split("=")[1]
         cargo = vars[1].split("=")[1]
+        console.log(parseInt(tema)  , temaBuscaAtual.length)
 
-        if(tema<temaBuscaAtual.length)
-            temaBuscaAtual = tema;
-
-        if((cargo == "sen") || (cargo == "dep"))
+        if(cargo == "sen"){
             baseCargoAtual = cargo;
+            if(parseInt(tema) < listTemasSen.length)
+                temaBuscaAtual = tema;
+        }else if (cargo == "dep"){
+            baseCargoAtual = cargo;
+            if(parseInt(tema) < listTemasDep.length)
+                temaBuscaAtual = tema;
+        }
+
 
         if((baseCargoAtual != "") && (temaBuscaAtual !="")){
             setTema(temaBuscaAtual, baseCargoAtual, showVotoTema)
+
+            if(baseCargoAtual == "dep")
+                $("#modal-aviso").modal();
         }else{
             alert("Desculpa, algo de errado ocorreu!")
         }
@@ -165,7 +174,7 @@ function showVotoTema(list, cargo){
 
     for(var i=0; i<list.length; i++){
         var d = getDados(list[i].nome, cargo);
-        console.log(d, list[i].nome)
+        //console.log(d, list[i].nome)
         var img = d.imagem.replace(/\s/g,'');
         var urlimg = "listasPoliticos/"+cargo+"/"+getAtuallegislatura(cargo)+"/images/"+img;
         var partido = d.part;
