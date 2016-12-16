@@ -32,13 +32,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="198" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.34366578" vertical-offset="357" max-vertical-offset="4029">
+            <state line="39" column="14" selection-start="2084" selection-end="2084" vertical-scroll-proportion="-11.769231" vertical-offset="357" max-vertical-offset="4029">
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="-3.0268886" vertical-offset="2534" max-vertical-offset="3315">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,6 +87,7 @@
         <option value="$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style/style.css" />
       </list>
     </option>
   </component>
@@ -129,6 +139,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quemvotou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quemvotou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quemvotou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,10 +500,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="198" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.34366578" vertical-offset="357" max-vertical-offset="4029">
+        <state line="39" column="14" selection-start="2084" selection-end="2084" vertical-scroll-proportion="-11.769231" vertical-offset="357" max-vertical-offset="4029">
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="-3.0268886" vertical-offset="2534" max-vertical-offset="3315">
+          <folding />
         </state>
       </provider>
     </entry>

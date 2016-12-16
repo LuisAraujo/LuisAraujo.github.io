@@ -10,7 +10,7 @@ body{
 #menu-lateral{
     margin-left: 10px !important;
     display: block;
-    height: calc(100% - 130px );
+    height: calc(100%);
 }
 
 .cont-dep{
