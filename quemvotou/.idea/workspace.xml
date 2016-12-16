@@ -23,11 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="listSen.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="listSen.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.27945206" vertical-offset="0" max-vertical-offset="1462">
+            <state line="22" column="42" selection-start="944" selection-end="944" vertical-scroll-proportion="-6.5384617" vertical-offset="204" max-vertical-offset="1462">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="51" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.5040431" vertical-offset="0" max-vertical-offset="4029">
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,16 +46,16 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-19.72" vertical-offset="629" max-vertical-offset="4930">
+            <state line="72" column="34" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4947">
               <folding>
-                <marker date="1481842164379" expanded="true" signature="4684:4716" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="4766:4780" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="5717:5739" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="5959:5981" placeholder="..." />
-                <marker date="1481842164379" expanded="false" signature="6178:6200" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="6341:6353" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="6391:6403" placeholder="..." />
-                <marker date="1481842164379" expanded="true" signature="6441:6453" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="4711:4743" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="4793:4807" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="5744:5766" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="5986:6008" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="6205:6227" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="6368:6380" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="6418:6430" placeholder="..." />
+                <marker date="1481848512979" expanded="false" signature="6468:6480" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -64,9 +75,9 @@
         <option value="$PROJECT_DIR$/listaTema/listPEC.html" />
         <option value="$PROJECT_DIR$/listaTema/dep/listPEC241.html" />
         <option value="$PROJECT_DIR$/listaTema/sen/listPEC241.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html" />
+        <option value="$PROJECT_DIR$/scripts/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -103,7 +114,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,6 +268,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,7 +310,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="-8" width="1538" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -338,113 +349,137 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3519">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="12" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1462">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="10" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.0" vertical-offset="1521" max-vertical-offset="3825">
+        <state line="66" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="4930">
           <folding>
-            <marker date="1481842164379" expanded="true" signature="4684:4716" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="4766:4780" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="5717:5739" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="5959:5981" placeholder="..." />
-            <marker date="1481842164379" expanded="false" signature="6178:6200" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6341:6353" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6391:6403" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6441:6453" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listaTema/listPEC.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="428" column="32" selection-start="11161" selection-end="11161" vertical-scroll-proportion="0.0" vertical-offset="7226" max-vertical-offset="8092">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listaTema/dep/listPEC241.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="8262">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listasPoliticos/dep/55leg/listDep.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="21" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2312">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listaTema/listPEC.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="430" column="29" selection-start="11222" selection-end="11222" vertical-scroll-proportion="0.111258276" vertical-offset="7226" max-vertical-offset="8092">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listasPoliticos/dep/55leg/listDep.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="37" selection-start="0" selection-end="5044" vertical-scroll-proportion="0.6397351" vertical-offset="1557" max-vertical-offset="2312">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listaTema/dep/listPEC241.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="24" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.4821192" vertical-offset="520" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listaTema/sen/listPEC241.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="402" selection-end="402" vertical-scroll-proportion="0.090066224" vertical-offset="255" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="0" selection-start="5755" selection-end="5755" vertical-scroll-proportion="-26.576923" vertical-offset="2199" max-vertical-offset="3791">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-19.72" vertical-offset="629" max-vertical-offset="4930">
-          <folding>
-            <marker date="1481842164379" expanded="true" signature="4684:4716" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="4766:4780" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="5717:5739" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="5959:5981" placeholder="..." />
-            <marker date="1481842164379" expanded="false" signature="6178:6200" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6341:6353" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6391:6403" placeholder="..." />
-            <marker date="1481842164379" expanded="true" signature="6441:6453" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="4711:4743" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="4793:4807" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5744:5766" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5986:6008" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6205:6227" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6368:6380" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6418:6430" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6468:6480" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.27945206" vertical-offset="0" max-vertical-offset="1462">
+        <state line="12" column="40" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1462">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="4930">
+          <folding>
+            <marker date="1481848512979" expanded="false" signature="4711:4743" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="4793:4807" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5744:5766" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5986:6008" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6205:6227" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6368:6380" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6418:6430" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6468:6480" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="10" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.0" vertical-offset="1521" max-vertical-offset="3825">
+          <folding>
+            <marker date="1481848512979" expanded="false" signature="4711:4743" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="4793:4807" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5744:5766" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5986:6008" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6205:6227" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6368:6380" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6418:6430" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6468:6480" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listaTema/listPEC.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="428" column="32" selection-start="11161" selection-end="11161" vertical-scroll-proportion="0.0" vertical-offset="7226" max-vertical-offset="8092" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listaTema/dep/listPEC241.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="8262" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listasPoliticos/dep/55leg/listDep.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="21" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2312" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listaTema/listPEC.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="430" column="29" selection-start="11222" selection-end="11222" vertical-scroll-proportion="0.111258276" vertical-offset="7226" max-vertical-offset="8092" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listasPoliticos/dep/55leg/listDep.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="37" selection-start="0" selection-end="5044" vertical-scroll-proportion="0.6397351" vertical-offset="1557" max-vertical-offset="2312" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listaTema/dep/listPEC241.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="24" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.4821192" vertical-offset="520" max-vertical-offset="1343" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listaTema/sen/listPEC241.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="18" selection-start="402" selection-end="402" vertical-scroll-proportion="0.090066224" vertical-offset="255" max-vertical-offset="1462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listasPoliticos/sen/55leg/listSen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="42" selection-start="944" selection-end="944" vertical-scroll-proportion="-6.5384617" vertical-offset="204" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="34" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4947">
+          <folding>
+            <marker date="1481848512979" expanded="false" signature="4711:4743" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="4793:4807" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5744:5766" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="5986:6008" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6205:6227" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6368:6380" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6418:6430" placeholder="..." />
+            <marker date="1481848512979" expanded="false" signature="6468:6480" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="51" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.5040431" vertical-offset="0" max-vertical-offset="4029">
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

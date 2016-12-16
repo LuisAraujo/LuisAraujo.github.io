@@ -68,7 +68,9 @@ $(document).ready( function(){
         vars = data.split("&");
         tema = vars[0].split("=")[1]
         cargo = vars[1].split("=")[1]
-        temaBuscaAtual = tema;
+
+        if(tema<temaBuscaAtual.length)
+            temaBuscaAtual = tema;
 
         if((cargo == "sen") || (cargo == "dep"))
             baseCargoAtual = cargo;
@@ -76,8 +78,7 @@ $(document).ready( function(){
         if((baseCargoAtual != "") && (temaBuscaAtual !="")){
             setTema(temaBuscaAtual, baseCargoAtual, showVotoTema)
         }else{
-            alert("Desculpa, algo de errado ocorreu!"+cargo +" "+tema)
-
+            alert("Desculpa, algo de errado ocorreu!")
         }
     }
 })
