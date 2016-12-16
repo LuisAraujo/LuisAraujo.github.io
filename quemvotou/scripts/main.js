@@ -1,8 +1,9 @@
 var UF = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG', 'PR', 'PB', 'PA', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SE', 'SP','TO'];
 var listaDep = [];
+var listaSen = [];
 var votacaoTema = [];
-var listTemasDep = [{tema:"PEC 241", legislatura:"55", link:"https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=pec%20241"}];
-var listTemasSen = [];
+var listTemasDep = [{tema:"PEC 241", nota:"",legislatura:"55", link:"https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=pec%20241"}];
+var listTemasSen = [{tema:"PEC 241", nota:"2º Turno.", legislatura:"55", link:"https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=pec+241+senado"}];
 var baseCargoAtual = "";
 var temaBuscaAtual = "";
 var qtdnao=0;
@@ -10,8 +11,10 @@ var qtdsim=0;
 
 $(document).ready( function(){
 
+
+
     $(window).click(function(evt) {
-        console.log("d");
+
         if ((evt.target.id != "bt-menu-princ") && (evt.target.id != "bt-menu-icon-princ")){
                 $("#menu-princ").hide("fast");
         }else if( $("#menu-princ").css("display") != "none"){
@@ -22,26 +25,30 @@ $(document).ready( function(){
 
     });
 
-
     for(var i=0; i<UF.length; i++)
         $("#ul-list-uf").append('<li><a  href="#">'+UF[i]+'</a></li>');
 
     setDepList();
+    setSenList();
 
     $("#op-cam-dep").click(function(){
         $("#inp-select-tema").removeAttr("disabled");
         baseCargoAtual = "dep";
+        temaBuscaAtual = "";
     });
     $("#op-sen").click(function(){
         $("#inp-select-tema").removeAttr("disabled");
-
         baseCargoAtual = "sen";
+        temaBuscaAtual = "";
     });
 
     $("#bt-pesquisa").click(function(){
-        $("#div-proj").hide();
-        setTema(temaBuscaAtual, baseCargoAtual, showVotoTema);
-        $("#modal-aviso").modal();
+
+
+        window.location.href =   window.location.href.split("?")[0]+"?tema="+temaBuscaAtual+"&cargo="+baseCargoAtual;
+
+        if(baseCargoAtual == "dep")
+            $("#modal-aviso").modal();
     });
 
     $("#inp-select-tema").bind('input propertychange', function(){
@@ -49,16 +56,30 @@ $(document).ready( function(){
         qtdnao =0;
         qtdsim=0;
         buscaTemas($(this).val());
-
-
     });
 
     $("#cont-item-tema").hide();
 
 
+    data = window.location.search.substring(1)
 
+    if(data != ""){
+        $("#div-proj").hide();
+        vars = data.split("&");
+        tema = vars[0].split("=")[1]
+        cargo = vars[1].split("=")[1]
+        temaBuscaAtual = tema;
 
+        if((cargo == "sen") || (cargo == "dep"))
+            baseCargoAtual = cargo;
 
+        if((baseCargoAtual != "") && (temaBuscaAtual !="")){
+            setTema(temaBuscaAtual, baseCargoAtual, showVotoTema)
+        }else{
+            alert("Desculpa, algo de errado ocorreu!"+cargo +" "+tema)
+
+        }
+    }
 })
 
 
@@ -76,24 +97,57 @@ function setDepList(){
 };
 
 
-function setTema(tema,cargo, cb){
-    votacaoTema = [];
-    $("#t").load("listaTema/"+cargo+"/list"+listTemasDep[tema].tema.replace(/\s/g,'')+".html", function(){
-        text = document.getElementById("t").innerText.toString();
+function setSenList(){
+    $("#a").load("listasPoliticos/sen/"+getAtuallegislatura('sen')+"/listSen.html", function(){
+        text = document.getElementById("a").innerText.toString();
         var lines = text.split(';');
-
-        for(var i = 0; i < lines.length-1; i++){
+        for(var i = 0; i<lines.length-1; i++){
             attr = lines[i].split(',');
-            votacaoTema.push( {nome:attr[0], voto:attr[1]});
+            //console.log(attr[0]);
+            listaSen.push( {nome:attr[0], part: attr[1], uf: attr[2], imagem: attr[3]} );
         }
-
-        $("#titulo-tema").html("<h2>"+listTemasDep[tema].tema+"</h2> <a target='_blank' href='"+listTemasDep[tema].link+"'> Deseja saber mais?</a> | ");
-        $("#div-sim").show();
-        $("#div-nao").show();
-        $("#div-abs").show();
-        cb(votacaoTema, cargo);
     });
 
+};
+
+
+function setTema(tema,cargo, cb){
+    votacaoTema = [];
+
+    if(cargo == "dep"){
+        $("#t").load("listaTema/"+cargo+"/list"+listTemasDep[tema].tema.replace(/\s/g,'')+".html", function(){
+            text = document.getElementById("t").innerText.toString();
+            var lines = text.split(';');
+
+            for(var i = 0; i < lines.length-1; i++){
+                attr = lines[i].split(',');
+                votacaoTema.push( {nome:attr[0], voto:attr[1]});
+            }
+
+            $("#titulo-tema").html("<h2>"+listTemasDep[tema].tema+"</h2> <a target='_blank' href='"+listTemasDep[tema].link+"'> Deseja saber mais?</a> | ");
+            $("#div-sim").show();
+            $("#div-nao").show();
+            $("#div-abs").show();
+            cb(votacaoTema, cargo);
+        });
+
+    }else if(cargo == "sen"){
+        $("#t").load("listaTema/"+cargo+"/list"+listTemasSen[tema].tema.replace(/\s/g,'')+".html", function(){
+            text = document.getElementById("t").innerText.toString();
+            var lines = text.split(';');
+
+            for(var i = 0; i < lines.length-1; i++){
+                attr = lines[i].split(',');
+                votacaoTema.push( {nome:attr[0], voto:attr[1]});
+            }
+
+            $("#titulo-tema").html("<span style='font-size: 40px; margin-top: 5px'>"+listTemasSen[tema].tema+"</span> <span style='color: #adadad'>"+listTemasSen[tema].nota+"</span><br><a target='_blank' href='"+listTemasSen[tema].link+"'> Deseja saber mais?</a> | ");
+            $("#div-sim").show();
+            $("#div-nao").show();
+            $("#div-abs").show();
+            cb(votacaoTema, cargo);
+        });
+    }
 }
 
 
@@ -102,6 +156,8 @@ function showVotoTema(list, cargo){
     $("#c-div-nao").html("");
     $("#c-div-abs").html("");
 
+    qtdsim = 0;
+    qtdnao = 0;
     var strNao = "";
     var strSim = "";
     var strAbs = "";
@@ -110,7 +166,7 @@ function showVotoTema(list, cargo){
         var d = getDados(list[i].nome, cargo);
         console.log(d, list[i].nome)
         var img = d.imagem.replace(/\s/g,'');
-        var urlimg = "listasPoliticos/"+cargo+"/"+getAtuallegislatura('dep')+"/images/"+img;
+        var urlimg = "listasPoliticos/"+cargo+"/"+getAtuallegislatura(cargo)+"/images/"+img;
         var partido = d.part;
         var uf = d.uf
 
@@ -128,14 +184,14 @@ function showVotoTema(list, cargo){
     strSim += '<div style="clear: both;"></div>';
     strNao += '<div style="clear: both;"></div>';
     strAbs += '<div style="clear: both;"></div>';
-    console.log($("#cont-votos").css("height"));
+    //console.log($("#cont-votos").css("height"));
 
     $("#titulo-tema").append(" Sim: "+qtdsim+" | Não:"+qtdnao);
     $("#c-div-sim").html(strSim);
     $("#c-div-nao").html(strNao);
     $("#c-div-abs").html(strAbs);
 
-    $("#menu-lateral").height($("#cont-votos").css("height"));
+    //$("#menu-lateral").height($("#cont-votos").css("height"));
 
 }
 
@@ -150,6 +206,15 @@ function getDados(politico, cargo){
                return r
            }
         }
+    }else if(cargo == "sen"){
+       for(var i=0; i<listaSen.length;i++){
+            //console.log(politico,listaDep[i].nome );
+            if(politico ==  listaSen[i].nome){
+                r = {imagem: listaSen[i].imagem, part: listaSen[i].part, uf: listaSen[i].uf};
+                //console.log(r)
+                return r
+            }
+        }
     }
 
     return {imagem: "Dep.jpg", part: "NULL", uf: "NULL"};
@@ -160,6 +225,8 @@ function getDados(politico, cargo){
 function getAtuallegislatura(cargo){
     if(cargo == "dep")
        return "55leg";
+    if(cargo == "sen")
+        return "55leg";
 
 }
 
