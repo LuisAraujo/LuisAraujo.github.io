@@ -39,6 +39,7 @@ a, a:visited{
 #menu a{
     width: 100%;
     display: block;
+	margin-top: 10px	
 
 }
 #menu .ativo{
@@ -89,5 +90,13 @@ a, a:visited{
 }
 h1,h2,h3,h4,h5{
     margin-top: 0px;
+}
+
+table{
+	margin-left:auto;
+	margin-right: auto;
+}
+table td{
+padding: 10px;
 }
 
