@@ -100,3 +100,15 @@ table td{
 padding: 10px;
 }
 
+.img-galeria{
+display: block;
+width:200px;
+margin-left:10px;
+margin-top:10px;
+border: 1 solid #000;
+float: left;
+}
+
+.img-galeria img{
+width:100%
+}
