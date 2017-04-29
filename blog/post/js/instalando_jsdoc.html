@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Luis Araujo | Instalando JsDoc</title>
+    <link href="../../stilo_pages.css" rel="stylesheet">
+	
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="luisaraujo.github.io/blog">
+	<meta property="og:title" content="Instalando o JsDoc">
+	<meta property="og:site_name" content="Luis Araujo">
+	<meta property="og:description" content="Aprenda a instalar e usar a API de documentação JsDoc para o 
+	seu projeto em javascript.">
+	<meta property="og:image" content="luisaraujo.github.io/blog/img/capa.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="800"> 
+	<meta property="og:image:height" content="600"> 
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="Luis Araujo">
+	<meta property="article:section" content="Tutorial">
+	<meta property="article:tag" content="javascript, JsDoc, documentação">
+	<meta property="article:published_time" content="date_time">
+</head>
+
+<body>
+<header>
+<div class="delimiter">
+   <a href="../../index.html"> Luis Araujo </div></a>
+</div>
+
+<div class="bt"><a href="../../about/index.html">sobre</div>
+
+</header>
+<article>
+
+<div class="post">
+	<div class="title">
+	<a href="#">Instalando o JSDoc</a>
+	</div>
+	
+	<div class="meta-data">
+	   Postado em:  29/04/2017 | Tags: <a class="link" href="../js/index.html" >javascript</a>
+	</div>
+	
+	<div class="abstract">
+	<p>Para quem não sabe o JSDoc é uma API para documentação de projetos javascripts. Basicamente ela
+	funciona obtendo dados dos comentários, assim como JavaDoc. Para isso é preciso usar algumas tags (@)
+	especificadas na documentação da API. Você pode consultar a documentação em: 
+	<a class="link" href="http://usejsdoc.org/">usejsdoc.org</a>. Nesse post vamos mostrar como instalar e rodá-la no windows.</p>
+	
+	<div class="subtitle"> Pré-requisito para o JSDoc</div>
+	
+	<p>Você precisa instalar o Node.js para intalar o JSDoc.</p>
+	
+	<div class="subtitle"> Instalando o JSDoc</div>
+	
+	<p>Com o Node instalado, vá no console e instale o jsdoc com o seguinte comando:</p>
+	
+	<div class="code">
+	    npm install -g jsdoc
+	</div>
+	
+	<p>Pronto, você já possui o jsdoc. Como esse instalação é global, você só precisa usar o comando jsdoc
+	para rodar. Vá até a pasta do seu projeto e execute o comando juntamente com o nome do arquivo:</p>
+	
+	<div class="code">
+	    jsdoc myfile.js
+	</div>
+	
+	<p>Ele irá criar uma pasta chamada "out" [essa pasta pode ser configurada com jsdoc -d] com a documentação em html.  <img class="emotion" src="../../happy-1.png"></p>
+	
+	<p>Há!!! Você pode colocar mais arquivos utilizando espaço:</p>
+	
+	<div class="code">
+	    jsdoc myfile.js myfile2.js
+	</div>
+	
+	E também ter arquivos em outra pasta
+	
+	<div class="code">
+	    jsdoc myfile.js  Teste/myfile2.js
+	</div>
+	
+	
+	Qualquer dúvida manda entra em contato! 	
+	
+	
+	
+	</div>
+</div>
+
+</article>
+
+<footer>
+	<div class="info">
+		Desenvolvido por Luis Araujo - 2017
+		<div class="icons">
+		<a href="https://www.facebook.com/canalLuis4raujo/?fref=ts" target="blank" class="icon-litte"><img src="../../fb-icon.png"></a>
+		<a href="https://www.youtube.com/user/Luis4raujo"  target="blank"  class="icon-litte"><img src="../../youtube-icon.png"></a>
+		<a href="https://github.com/LuisAraujo"  target="blank"  class="icon-litte"><img src="../../git-icon.png"></a>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
