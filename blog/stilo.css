@@ -17,7 +17,9 @@ a{
 	color: rgb(0, 162, 232);
 }
 
-
+html{
+	height:100%;
+}
 body{
     font-family: Georgia;
     color: #444;
@@ -25,6 +27,7 @@ body{
     margin: 0px;
 	background-color: #fafafa;
 	padding: 0px;
+	height:100%;
 }
 
 header{
@@ -60,8 +63,11 @@ header .bt{
 article{
     margin-top:10px;
 	width: 70%;
-	min-height: calc(100% - 200px);
+	min-height: calc( 100% - 200px);
+	min-height: -moz-calc( 100% - 200px);
+	min-height: -webkit-calc( 100% - 200px);
 	margin-left: 15%;
+
 }
 
 .post{
