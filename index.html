@@ -1,23 +1,290 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+ 
 	<script type="text/javascript" src="http://static.boo-box.com/javascripts/boo-inject.js"></script>
 	<meta name="bbx-domain-token" content="6edef40bfab901f9b82f1b2d088aa48a4d9d144d"/>
 
 
     <meta charset="utf-8">
-    <title>Luis Araujo | 2016</title>
+    <title>Luis Araujo | 2017</title>
     <script type="text/javascript" src="http://static.boo-box.com/javascripts/boo-inject.js"></script>
     <meta name="bbx-domain-token" content="6edef40bfab901f9b82f1b2d088aa48a4d9d144d"/>
 
 <style>
-body{
- background-color: rgb(248,211,34);
-}
+	body{
+	     padding: 0px;
+		 margin:0px;
+		 background-color: #f8d322;
+		 color:#1f1f1f;
+		 font-family: Swis721 Hv BT;
+	}
+
+	#conteiner-menu{
+		margin-top: 100px;
+		width: 1250px;
+		
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	@keyframes fadein-item-menu {
+		from { box-shadow:  0px 0px 0px  #c33536;}
+		to { box-shadow:  5px 5px 1px  #c33536;}
+	}
+	
+	
+	.item-menu{
+		  float: left;
+		  background-color: #f14143;
+		  padding: 10px;
+		  font-size: 30px;
+		  color:#fff;
+		  font-weight: bold;
+		  text-align: center;
+		  
+		  width: 200px;
+		  height: 50px;
+		  line-height: 50px; 
+		  
+		  box-shadow:  5px 5px 1px  #c33536;
+		  -ms-transform: skew(-10deg); /* IE 9 */
+		  -webkit-transform: skew(-10deg); /* Chrome, Safari, Opera */
+		  transform: skew(-10deg); /* Standard syntax */
+		  transform-origin: bottom left; /* Prevent the bottom from shifting */
+		  
+		  margin-left: 20px;
+		  margin-top: 25px;
+		  
+		  animation-name: fadein-item-menu ;
+          animation-duration: 2s; 
+	}
+	
+	.item-menu:hover{
+		cursor: pointer;
+		background-color:  #c33536;
+		box-shadow:  5px 5px 1px #f14143;
+		color: #eee;
+	}
+	
+	.item-menu-hide{
+	      float: left;
+		  background-color: rgba(0,0,0,0);
+		  padding: 10px;
+		  font-size: 30px;
+		  color:#fff;
+		  font-weight: bold;
+		  text-align: center;
+		  
+		  width: 200px;
+		  height: 50px;
+		  line-height: 50px; 
+		  
+		  margin-left: 20px;
+		  margin-top: 25px;
+		  box-shadow:  5px 5px 1px  rgba(0,0,0,0);
+		  -ms-transform: skew(-10deg); /* IE 9 */
+		  -webkit-transform: skew(-10deg); /* Chrome, Safari, Opera */
+		  transform: skew(-10deg); /* Standard syntax */
+		  transform-origin: bottom left; /* Prevent the bottom from shifting */
+		  margin-left: 20px;
+	}
+	
+	
+	#header-page{
+	    padding-top: 2px;
+		padding-bottom: 2px;
+		width: calc(100% - 20px);
+		padding-left: 10px;
+		padding-right: 10px;
+		line-height: 50px;
+		height: 50px;
+		background-color: #f8d322;
+		color:#fff;
+		font-size: 30px;
+		text-indent: 10px;
+	}
+	
+	#header-page img{
+		height: 100%;
+		float: right;
+	}
+	
+	#header-page img:hover{
+		cursor: pointer;
+	}
+	
+	
+	@keyframes background-header {
+		from { opacity: 0;}
+		to { opacity: 1;}
+	}
+	
+	.active-header{
+		animation-name: background-header;
+		animation-duration: 1s; 		
+	}
+	
+	
+	.fadein-up{
+	    animation-name: fadein-cont-msg ;
+        animation-duration: 1s; 
+	}
+	
+	
+	#conteiner-nome{
+	     position:fixed;
+		 bottom: 25px;
+		 right: 15px;
+	    
+	      font-size: 100px;
+		  color:#1f1f1f;
+		  font-weight: bold;
+		  line-height: 80px; 
+	}
+	
+	
+	#conteiner-nome:hover{
+		color:#2f2f2f;
+		cursor: pointer;
+	}
+	
+	
+	#nome{
+		position: relative;
+		left: 98px;
+	}
+	
+	
+	@keyframes fadein-cont-msg {
+		from {opacity: 0; bottom:10px}
+		to {opacity: 1; bottom: 20px;}
+	}
+
+	.fadein-up{
+	    animation-name: fadein-cont-msg ;
+        animation-duration: 1s; 
+	}
+	
+	
+	#conteiner-mensagem{
+	
+	    border-top: 15px  solid #f14143;
+		background-color: #fff;
+		width: 300px;
+		font-size: 12px;
+		padding: 20px;
+		text-align: justify;
+		
+		position: fixed;
+		bottom: 20px;
+		margin-left: 10px;
+	}
+	
+	#conteiner-mensagem img{
+		position:relative;
+		top: 20px;
+		width:15px;
+	}
+	
+	
+	
+		
+	#autor{
+		text-align: right;
+		color:#555;
+		margin-top:5px;
+	}
+	
+	
+	#aviso{
+	    display: none;
+		font-size: 50px;
+		color: 1f1f1f;
+		text-align: center;
+		width: 100%;
+		margin-top: 200px;
+	}
+	
 </style>
+
+<script src="js/jquery.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91092552-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
 </head>
 <body>
+<header id="header-page">
+	<div id="text-hp"></div>
+	<img id="bt-github" src="imgs/github-icon.png">
+</header>
+
+<div id="aviso">
+	 EM CONTRUÇÃO 
+</div>
+<nav id="conteiner-menu">
+
+<div id="bt-portifolio" class="item-menu">
+	POTIFÓLIO
+ </div>
+ 
+ <div  id="bt-blog" class="item-menu">
+	BLOG
+ </div>
+  
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+
+<div  id="bt-cursos" class="item-menu">
+	CURSOS
+</div>
+
+<div id="bt-youtube" class="item-menu">
+	YOUTUBE
+</div>
+
+<div id="bt-aulas" class="item-menu">
+	AULAS
+</div>
+
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+<div class="item-menu-hide"></div>
+
+<div id="bt-academico" class="item-menu">
+	ACADÊMICO
+</div>
+
+<div id="bt-sobre" class="item-menu">
+	SOBRE
+</div>
+
+</nav>
+
+<div id="conteiner-mensagem" class="fadein-up">
+	<div id="msg" >O mundo é um lugar perigoso de se viver, não por causa daqueles que fazem o mal, mas sim por causa daqueles que observam e deixam o mal acontecer.</div>
+	<div id="autor" >Albert Eiesten</div>
+
+</div>
+
+
+<div id="conteiner-nome">
+<div id="nome">LUIS</div>
+<div id="sobrenome" >Araujo</div>
+</div>
 
 <!--
 <h3>Site em Manutenção!</h3>
@@ -26,5 +293,76 @@ body{
 <br>vá para: <a href="senac"> Curso SENAC</a>
 <br>vá para: <a href="quemvotou"> Projeto Quem Votou?</a>
 -->
+
+<script>
+
+showSecion = function(name){
+
+	  $("#bt-github").hide();
+	  $("#header-page").css("backgroundColor", "#f14143");
+	  $("#text-hp").text(name);
+	  
+	  $("#header-page").addClass("active-header");
+	 $("#conteiner-menu").fadeOut( "slow" );
+	 $("#conteiner-mensagem").fadeOut( "slow", function(){	
+			$("#aviso").show();	
+	 } );
+
+}
+$("#bt-portifolio").click(function(){
+     
+	 showSecion("PORTIFÓLIO");
+		 
+});
+
+$("#bt-blog").click(function(){
+	window.open("blog");
+});
+
+$("#bt-cursos").click(function(){
+	showSecion("CURSOS");
+});
+
+$("#bt-youtube").click(function(){
+	window.open("https://www.youtube.com/Luis4raujo");
+});
+
+$("#bt-aulas").click(function(){
+	window.open("amelia_informatica");
+});
+
+$("#bt-academico").click(function(){
+	window.open("programacao_com_midias");
+});
+
+
+$("#bt-sobre").click(function(){
+	showSecion("SOBRE");
+});
+
+
+$("#bt-github").click(function(){
+	window.open("https://github.com/LuisAraujo/");
+});
+
+$("#conteiner-nome").click(function(){
+   location.reload();
+});
+
+
+
+
+fn_timeMsg = setInterval(function(){
+   
+   $("#conteiner-mensagem").removeClass("fadein-up");
+   setTimeout(function(){
+   $("#conteiner-mensagem").addClass("fadein-up");
+   }, 20);
+   
+	
+}, 10000);
+
+
+</script>
 </body>
 </html>
