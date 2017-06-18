@@ -3,9 +3,13 @@
     <meta charset="utf-8">
     <title>Luis Araujo | Blog</title>
     <link href="../stilo_pages.css" rel="stylesheet">
+	<script>
+	if(  window.location.href.split("://")[0] != "https")
+	   window.location.replace("https://"+window.location.href.split("://")[1]);
 </head>
 
 <body>
+
 <header>
 <div class="delimiter">
    <a href="../index.html"> Luis Araujo </div></a>
@@ -74,10 +78,10 @@
 	
 	
 	
-	var disqus_config = function () {
-	this.page.url = window.location.href.split("//")[1]; 
+	//var disqus_config = function () {
+	 //this.page.url = "htttp://window.location.href.split("//")[1]; 
 	//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
+	//	};
 	
 	(function() { // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');
