@@ -23,6 +23,14 @@
 			ga('create', 'UA-91092552-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script>
+			 url = window.location.href.split("://")[0];
+			 console.log(url);
+			if( url != "https"){
+			   window.location.href  = "https://"+window.location.href.split("://")[1];
+			}
+		</script>
+		
 </head>
 
 <body>
@@ -80,6 +88,21 @@
 	</div>
 </div>
 
+
+<div id="disqus_thread"></div>
+	<script>
+	
+	(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = 'https://luisaraujo-blog.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+	
 </article>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -102,6 +125,6 @@
 		</div>
 	</div>
 </footer>
-
+<script id="dsq-count-scr" src="//luisaraujo-blog.disqus.com/count.js" async></script>
 </body>
 </html>

@@ -13,6 +13,13 @@
 			ga('create', 'UA-91092552-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script>
+			 url = window.location.href.split("://")[0];
+			 console.log(url);
+			if( url != "https"){
+			   window.location.href  = "https://"+window.location.href.split("://")[1];
+			}
+		</script>
 </head>
 
 <body>
