@@ -1,19 +1,19 @@
 	<html>
 	<head>
-		<meta charset="utf-8">
-		<title>Luis Araujo | Blog</title>
-		<link href="stilo.css" rel="stylesheet">
-		
-		<meta property="og:locale" content="pt_BR">
-		<meta property="og:url" content="http://luisaraujo.github.io/blog/post/js/instalando_jsdoc.html">
-		<meta property="og:title" content="Luis Araujo | Blog">
-		<meta property="og:site_name" content="Luis Araujo">
-		<meta property="og:description" content="Seu blog sobre programação! Aprenda sobre web e games. Tudo sobre APIs, frameworks, padrões e programação no mesmo lugar!">
-		
-		<meta property="og:image" content="https://luisaraujo.github.io/blog/img/capa.jpg">
-		<meta property="og:image:type" content="image/jpeg">
-		<meta property="og:image:width" content="800"> 
-		<meta property="og:image:height" content="600">
+    <meta charset="utf-8">
+    <title>Luis Araujo | Blog</title>
+    <link href="stilo_pages.css" rel="stylesheet">
+	
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="http://luisaraujo.github.io/blog">
+	<meta property="og:title" content="Luis Araujo - Blog">
+	<meta property="og:site_name" content="Luis Araujo">
+	<meta property="og:description" content="Seu blog sobre programação">
+	
+	<meta property="og:image" content="https://luisaraujo.github.io/blog/img/capa.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="800"> 
+	<meta property="og:image:height" content="600"> 
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,8 +23,14 @@
 			ga('create', 'UA-91092552-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script>
+			 url = window.location.href.split("://")[0];
+			 console.log(url);
+			if( url != "https"){
+			   window.location.href  = "https://"+window.location.href.split("://")[1];
+			}
+		</script>
 	</head>
-
 <body>
 <header>
 <div class="delimiter">
