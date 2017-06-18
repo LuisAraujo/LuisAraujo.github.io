@@ -4,9 +4,11 @@
     <title>Luis Araujo | Blog</title>
     <link href="../stilo_pages.css" rel="stylesheet">
 	<script>
-		if(  window.location.href.split("://")[0] != "https")
+	     url = window.location.href.split("://")[0];
+		 console.log(url);
+		if( url != "https"){
 		   window.location.replace = "https://"+window.location.href.split("://")[1];
-	   
+		}
 	</script>
 </head>
 
