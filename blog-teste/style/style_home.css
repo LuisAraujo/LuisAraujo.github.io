@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Georgia, serif;
+    src: url(Georgia.ttf);
+}
+
+
+a{
+	text-decoration:none;
+}
+
+
+.link{
+	color: #aaa;
+}
+
+.link:hover{
+	color: rgb(0, 162, 232);
+}
+
+html{
+	height:100%;
+}
+body{
+    font-family: Georgia;
+    color: #444;
+    padding: 0px;
+    margin: 0px;
+	background-color: #2a2a2a;
+	padding: 0px;
+	height:100%;
+}
+
+header{
+    
+	font-size: 40px;
+	height: 50px;
+	border-bottom: 2px solid #eee;
+	background-color: #222;
+	padding-top: 10px;
+}
+
+header a{
+	color: rgb(255,255,255)
+}
+
+header .delimiter{
+	width: 70%;
+	margin-left: 15%;
+	float:left;
+}
+
+
+header .bt{
+	height: 20px;
+	border-radius: 5px;
+	border: 1.4px solid #fff;
+	padding:5px;
+	background: #222;
+	float:left;
+	font-size: 15px;
+}
+
+article{
+    margin-top:10px;
+	width: 70%;
+	min-height: calc( 100% - 180px);
+	min-height: -moz-calc( 100% - 180px);
+	min-height: -webkit-calc( 100% - 180px);
+	margin-left: 15%;
+
+}
+
+.post{
+	width: calc(100% - 50px);
+	height: 150px;
+	overflow: hidden;
+	text-aling: justify;
+	font-size: 17px;
+	padding:20px;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: #444;
+	border-bottom: 3px solid #333;
+}
+
+.post .title{
+	font-size: 30px;
+}
+
+.post .title a{
+	color: #fff;
+}
+
+
+.post .title a:hover{
+	color: rgb(0, 162, 232);
+}
+
+.post .abstract{
+    height: 100px;
+	width: calc(100% - 20px);
+	text-align: justify;
+	margin-top: 5px;
+	line-height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+footer{
+	margin-top:40px;
+	height: 60px;
+	background-color: #777;
+	color: #fff;
+	padding:10px;
+}
+
+footer .publicity{
+	width:70%;
+	hight: 120px;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+footer .info{
+   height:20px;
+   width:100%;
+   font-size: 10px;
+   text-align:center;
+   margin-top: 10px;
+}
+
+.icon-litte img{
+	width: 20px;
+	height: 20px;
+	margin-left:10px;
+}
+
+.icons{
+	margin-top: 10px;
+}
+
+.tags{
+	font-size:14px;
+	color: #fff !important;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	background-color:  #333;
+}
+
+.tags:hover{
+	color:#000 !important;
+}
+
+.meta-data{
+	font-size: 10px;
+	height: 10px;
+}

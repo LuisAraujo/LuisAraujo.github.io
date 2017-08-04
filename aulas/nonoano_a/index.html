@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="text-align: center">
+<h2>Desafio: Encontre a Mensagem Escondida na Imagem</h2>
+<b style="color:#f00">ATENÇÃO, ainda não há mensagem, aguarde até 23:50 de sexta-feira (04/08/2017)</b><br>
+Use os seus conhecimentos sobre <i>imagem digital, pixels, padrão RGB e efeitos</i>
+para descobrir.
+<br>
+</div>
+<canvas style="margin-left: calc(50% - 200px)" id="canvas" height="400" width="400"> </canvas>
+<div style="text-align: center">
+<div>Valor RGB: <span id="v-rgb"></span></div>
+<div>Posição do Pixel: <span id="x-pos"></span>; <span id="y-pos"></span></div>
+</div>
+
+<script src="image.js"> </script>
+<script>
+
+canvas = document.getElementById("canvas");
+contexto = canvas.getContext("2d");
+size = 40;
+arr_rgb = [400/size];
+arr_rgb[0] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[1] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[2] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[3] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[4] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[5] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[6] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[7] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[8] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+arr_rgb[9] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+
+drawPixel();
+ 
+function drawPixel(){
+	for(i=0; i< arr_rgb.length; i++){
+		for(j=0; j< arr_rgb[i].length; j++){
+			contexto.fillStyle = arr_rgb[i][j];
+			contexto.fillRect( j*size, i*size,size, size);
+		
+		}
+	}
+}
+	
+ function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+
+canvas.addEventListener('mousemove', function(evt) {
+var mousePos = getMousePos(canvas, evt);
+var posx = parseInt(mousePos.x/size);
+var posy = parseInt(mousePos.y/size);
+elem = document.getElementById("x-pos").innerHTML = posx;
+elem = document.getElementById("y-pos").innerHTML = posy;
+elem = document.getElementById("v-rgb").innerHTML = arr_rgb[parseInt(mousePos.y/size)][parseInt(mousePos.x/size)];
+drawPixel();
+contexto.strokeStyle = "#ff0";
+contexto.strokeRect(posx*size, posy*size,size, size);
+
+}, false);
+
+</script>
+<body>
+</html>

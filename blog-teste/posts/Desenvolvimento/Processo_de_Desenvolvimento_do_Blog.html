@@ -1,0 +1,130 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Luis Gustavo | Processo de Desenvolvimento do Blog
+</title>
+	<link href="../style/style_pages.css" rel="stylesheet">
+
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="http://luisaraujo.github.io/blog/post/js/instalando_jsdoc.html">
+	<meta property="og:title" content="Processo de Desenvolvimento do Blog
+">
+	<meta property="og:site_name" content="Luis Gustavo">
+	<!-- need set abstract -->
+	<meta property="og:description" content="Aprenda a instalar e usar a API de documentação JsDoc para o seu projeto em javascript.">
+
+	<meta property="og:image" content="https://luisaraujo.github.io/blog/img/capa.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="600">
+
+	</head>
+
+	<body>
+	<header>
+	<div class="delimiter">
+	<a href="../../index.html"> Luis Gustavo </div></a>
+	</div>
+
+	<div class="bt"><a href="../../about/index.html">sobre</div>
+
+	</header>
+	<article>
+
+	<div class="post">
+	<div class="title">
+	<a href="#">Processo de Desenvolvimento do Blog
+</a>
+	</div>
+
+	<div class="meta-data">
+	   Postado em:  04/05/2017
+| Tags: <a class="link" href="index.html" >Desenvolvimento
+</a>
+	</div>
+
+	<div class="abstract">
+		
+<div class="abstract">
+
+<p>Olá pessoal, esse post é para falar um pouco mais sobre a nossa aplicação de site estático. Há algum tempo usei uma ferramenta de geração de sites - a <a href=" https://willianjusten.com.br/por-que-usar-jekyll/"> jekyll </a> -  que não 
+gostei pelos seguintes motivos:  </p>
+<p>#1 - Pelo processo de geração do blog (via console); </p>
+<p>#2 - Por não possuir uma interface que me facilitasse a escrita das postagens.  </p>
+<p>Passado alguns meses, resolvi resgatar a ideia do blog. Criei a minha estrutura, meus primeiros posts, o estilo 
+(com css) e por ai vai - é justamente esse templete aqui que você está lendo.  Tinha então um blog estático, mas ainda
+ assim era preciso: </p>
+<p> #1 - Criar paginas de posts a cada novo post; </p>
+<p># 2- Adicionar o link a lista de posts da sua respectiva caterogia; </p>
+<p> #3 - Colocar o link com data, título e resumo na homepage. </p>
+<p>Pois é! Vários problemas que - por fim - continuavam a comer o meu time (que já é escasso) e que agregam grande probabilidade de erro, pois posso esquecer de algum arquivo ou até <i>linkar</i> de maneira errada.</p>
+<div class="subtitle"> A ideia</div>
+<p>Resolvi, então, criar um gerador via PHP que eu pudesse rodar facilmente no meu servidor local para que ele pudesse 
+gerar as páginas, obtendo dados de arquivos textos. Além disso, idealizei criar uma interface para fazer as postagens e controlar a plataforma (que lindo não?). </p>
+<div class="subtitle"> Formulando a base de dados</div>
+
+<img class="img-little" src='../../images/Processode Desenvolvimento do Blog_fomato_txt.jpg'>
+
+
+<p>Após arrumar todo o processo de geração com cada página e pasta criada partir para a inserção dos dados, como já
+ tinha os templetes do blog com o estilo e as tags, só foi preciso inserir códigos do PHP do código html. </p>
+
+<img class="img-little" src="../../img/arqui_blog.jpg">
+
+<div class="subtitle"> A interface</div>
+<p>Feito isso, o próximo passo foi a criação da interface. Nela usei javascript se comunicando com o PHP via ajax. 
+Obtenho, assim, a lista dos arquivos e os dados de cada um, colocando-os nos inputs para edição. Atualmente já é 
+possível criar um post, salvar, editar e gerar o blog. O conteúdo é editado via html, mas pode ser visto através de 
+preview com iframe! </p>
+
+<img class="img-large" src="../../img/interface.jpg">
+
+<p> As projeções futuras são: finalizar a interface, colocando elementos de configuração da plataforma, permitir a 
+inserção de templetes, configuração do local de geração do blog, nome do blog e o processo de inserção de imagem.</p>
+
+<p> Se você chegou até aqui e está interessado nessa coisa ai de gerar site estático, passa no <a target="blank" href="https://github.com/LuisAraujo/SoteroGen"> repositório do projeto</a>.</p>
+
+	
+	</div>
+
+
+
+
+	</div>
+	</div>
+
+	<!-- TESTE DISQUS -->
+
+	<div id="disqus_thread"></div>
+	<script>
+
+	(function() { 
+
+	// DONT EDIT BELOW THIS LINE
+	var d = document, s = d.createElement("script");
+	s.src = "https://luisaraujo-blog.disqus.com/embed.js";
+	s.setAttribute("data-timestamp", +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	</div>
+
+
+
+	</article>
+
+	<footer>
+	<div class="info">
+		Developmented with SoteroGen by Luis Araujo - 2017
+		<div class="icons">
+		<a href="https://www.facebook.com/canalLuis4raujo/?fref=ts" target="blank" class="icon-litte"><img src="../../images/fb-icon.png"></a>
+		<a href="https://www.youtube.com/user/Luis4raujo"  target="blank"  class="icon-litte"><img src="../../images/youtube-icon.png"></a>
+		<a href="https://github.com/LuisAraujo"  target="blank"  class="icon-litte"><img src="../../images/git-icon.png"></a>
+		</div>
+	</div>
+	</footer>
+
+	</body>
+	</html>

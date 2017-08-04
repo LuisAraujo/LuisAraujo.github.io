@@ -1,0 +1,187 @@
+@font-face {
+    font-family: Georgia, serif;
+    src: url(Georgia.ttf);
+}
+
+a{
+	text-decoration:none;
+}
+
+
+.link{
+	color: #aaa;
+}
+
+.link:hover{
+	color: rgb(0, 162, 232);
+}
+
+html{
+	height:100%;
+}
+
+body{
+    font-family: Georgia;
+    color: #444;
+    padding: 0px;
+    margin: 0px;
+	padding: 0px;
+	height:100%;
+    background-color: #2a2a2a;
+}
+
+header{
+	font-size: 40px;
+	height: 50px;
+	border-bottom: 2px solid #eee;
+	background-color: #222;
+	padding-top: 10px;
+}
+
+header .delimiter{
+	width: 70%;
+	margin-left: 15%;
+	float:left;
+}
+
+header .bt{
+	height: 20px;
+	border-radius: 5px;
+	border: 1.4px solid #fff;
+	padding:5px;
+	background: #222;
+	float:left;
+	font-size: 15px;
+}
+
+header a{
+	color:#fff;
+}
+
+
+article{
+    margin-top:10px;
+	width: 70%;
+	min-height: calc(100% - 200px);
+	margin-left: 15%;
+}
+
+.post{
+	width: calc(100% - 50px);
+	overflow: hidden;
+	text-aling: justify;
+	color:#aaa;
+	padding:20px;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: #444;
+}
+
+.post .title a{
+	color: #fff;
+	font-size: 40px;
+}
+
+.subtitle{
+	color: #fff;
+	font-size: 30px;
+}
+
+
+.post .title a:hover{
+	color: rgb(0, 162, 232);
+}
+
+.post .abstract{
+	width: calc(100% - 20px);
+	text-align: justify;
+	margin-top: 5px;
+	font-size: 20px;
+	line-height: 25px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.code{
+	font-family: arial;
+	background-color: #eee;
+	border-radius: 10px;
+	padding:10px;
+	padding-left:20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+.emotion{
+	width:20px;
+	height:20px;
+}
+
+
+
+
+footer{
+	margin-top:40px;
+	height: 60px;
+	background-color: #777;
+	color: #fff;
+	padding:10px;
+}
+
+footer .publicity{
+	width:70%;
+	hight: 120px;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+footer .info{
+   height:20px;
+   width:100%;
+   font-size: 10px;
+   text-align:center;
+   margin-top: 10px;
+}
+
+.icon-litte img{
+	width: 20px;
+	height: 20px;
+	margin-left:10px;
+}
+
+.icons{
+	margin-top: 10px;
+}
+
+.profile{
+	width:100px;
+	height:100px;
+	border-radius: 50px;
+}
+
+
+.listpost{
+	list-style-type: disc;
+}
+
+
+
+.img-large{
+	width: 70%;
+	margin-left: 15%;
+    margin-bottom:10px;	
+}
+
+.img-little{
+	width: 50%;
+	margin-left: 25%;
+    margin-bottom:10px;	
+}
+
+
+.meta-data{
+	color:#aaa;
+}
+
