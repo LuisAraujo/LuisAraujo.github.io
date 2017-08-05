@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="md5.js"></script>
+</head>
+<body>
+<div style="text-align: center">
+<h2>Desafio: Informe a senha</h2>
+<b> Se vcocê chegou até aqui é porque descobri a pista e sabe a senha.</b>
+<br>
+<br>
+1 - Digite a senha que descobriu com a pista na image<br>
+<div id="msg-sucess" style="color:#22ff33; display:none">Parabéns! Você conseguiu, contacte o professor e informe a palavra.</div>
+<div id="msg-erro" style="color:#ff2233; display:none">Você ainda não descobriu a senha, peça uma dica ao professor.</div>
+<br>
+</div>
+
+<input style="margin-left:calc(50% - 100px)" id="password" type="text"></input><br><br>
+<button style="margin-left:calc(50% - 50px)" id="bt-password" type="button">Enviar</button>
+</div>
+<script>
+
+var btpassword = document.getElementById("bt-password");
+btpassword.addEventListener('click', function(evt) {
+
+var password = document.getElementById("password").value;
+    if(hex_md5(password.toLowerCase()).toString() == "50c48e586859aaca2d2a83a99d3c7797"){
+	  document.getElementById("msg-sucess").style.display = "block";
+	  document.getElementById("msg-erro").style.display = "none";
+	 
+	}else{
+	 document.getElementById("msg-sucess").style.display = "none";
+	 document.getElementById("msg-erro").style.display = "block";
+ 
+	}
+
+	
+});
+
+</script>
+<body>
+</html>

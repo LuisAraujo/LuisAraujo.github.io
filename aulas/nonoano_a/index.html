@@ -6,41 +6,103 @@
 <body>
 <div style="text-align: center">
 <h2>Desafio: Encontre a Mensagem Escondida na Imagem</h2>
-<b style="color:#f00">ATENÇÃO, ainda não há mensagem, aguarde até 23:50 de sexta-feira (04/08/2017)</b><br>
-Use os seus conhecimentos sobre <i>imagem digital, pixels, padrão RGB e efeitos</i>
-para descobrir.
+<b> Clique <a id="active-effect" href="#">aqui</a> para des/ativar o efeito Escala de Cinza</b>
 <br>
+<br>
+1 - Encontre a mensagem escondida<br>
+2 - Ela é apenas uma pista<br>
+3 - Encontre a palavra através da pista <i>(pesquise na internet)</i><br>
+4 - Vá na página: <a href="senha"> luisaraujo.github.io/aula/nonoano_a/senha</a><br>
+5 - Digite a palavra e verifique se é a correta<br>
+<br>
+
+
 </div>
 <canvas style="margin-left: calc(50% - 200px)" id="canvas" height="400" width="400"> </canvas>
 <div style="text-align: center">
-<div>Valor RGB: <span id="v-rgb"></span></div>
+<div>Cor do Pixel: <span id="v-rgb"></span></div>
 <div>Posição do Pixel: <span id="x-pos"></span>; <span id="y-pos"></span></div>
-</div>
 
-<script src="image.js"> </script>
+</div>
 <script>
 
+effect = false;
 canvas = document.getElementById("canvas");
 contexto = canvas.getContext("2d");
 size = 40;
 arr_rgb = [400/size];
-arr_rgb[0] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[1] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[2] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[3] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[4] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[5] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[6] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[7] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[8] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
-arr_rgb[9] = ["#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa","#000", "#aaa"];
+insertColorArray();
+	
+function insertColorArray(){
+	orange1 = [254,147,52];
+	orange2 = [247,175,29];
+	yellow = [248,196,32];
+	grey0 = [200,200,200];
+	grey1 = [173,160,141];
+	grey2 = [158,145,126];
+	grey3 = [139,127,103];
+	grey4 = [126,118,97];
+	blue1 = [55,114,148];
+	blue2 = [62,124,161];
+	green1 = [49,97,45];
+	green2 = [41,82,38];
+	brow1 = [69,53,20];
+
+
+	arr_rgb[0] = [orange1,orange1,orange1, orange1,orange1,orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[1] = [orange1, yellow,yellow,yellow,orange1,orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[2] = [yellow, orange2,orange2,orange2,yellow, orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[3] = [yellow, orange2,grey1,grey1,yellow, orange1,orange1,grey1,orange1,orange1];
+	arr_rgb[4] = [yellow, grey1, grey2,blue1,grey2, orange1,grey1,grey2,grey3,orange1];
+	arr_rgb[5] = [grey1,  grey2, grey3, grey4,blue2, grey2,grey2,grey1,grey2,grey3];
+	arr_rgb[6] = [grey1, green1, grey1, grey2,blue1, grey2,grey1,grey2,grey2,green1];
+	arr_rgb[7] = [green1, green2,green1,grey0,blue1, blue2,grey2, grey2,green1,green2];
+	arr_rgb[8] = [green2, green2,green2, grey1,grey1, blue2,blue1,grey1,green2,green2];
+	arr_rgb[9] = [grey1, brow1,grey2,grey2,grey2,grey1,blue1,grey1,grey1,brow1];
+}
+
+
+	
+function insertColorArray2(){
+	orange1 = "rgb(254,147,52)";
+	orange2 = "rgb(247,175,29)";
+	yellow = "rgb(248,196,32)";
+	grey0 = "rgb(200,200,200)";
+	grey1 = "rgb(173,160,141)";
+	grey2 = "rgb(158,145,126)";
+	grey3 = "rgb(139,127,103)";
+	grey4 = "rgb(126,118,97)";
+	blue1 = "rgb(55,114,148)";
+	blue2 = "rgb(62,124,161)";
+	green1 = "rgb(49,97,45)";
+	green2 = "rgb(41,82,38)";
+	brow1 = "rgb(69,53,20)";
+
+
+	arr_rgb[0] = [orange1,orange1,orange1, orange1,orange1,orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[1] = [orange1, yellow,yellow,yellow,orange1,orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[2] = [yellow, orange2,orange2,orange2,yellow, orange1,orange1,orange1,orange1,orange1];
+	arr_rgb[3] = [yellow, orange2,grey1,grey1,yellow, orange1,orange1,grey1,orange1,orange1];
+	arr_rgb[4] = [yellow, grey1, grey2,blue1,grey2, orange1,grey1,grey2,grey3,orange1];
+	arr_rgb[5] = [grey1,  grey2, grey3, grey4,blue2, grey2,grey2,grey1,grey2,grey3];
+	arr_rgb[6] = [grey1, green1, grey1, grey2,blue1, grey2,grey1,grey2,grey2,green1];
+	arr_rgb[7] = [green1, green2,green1,grey0,blue1, blue2,grey2, grey2,green1,green2];
+	arr_rgb[8] = [green2, green2,green2, grey1,grey1, blue2,blue1,grey1,green2,green2];
+	arr_rgb[9] = [grey1, brow1,grey2,grey2,grey2,grey1,blue1,grey1,grey1,brow1];
+}
+
 
 drawPixel();
  
 function drawPixel(){
 	for(i=0; i< arr_rgb.length; i++){
 		for(j=0; j< arr_rgb[i].length; j++){
-			contexto.fillStyle = arr_rgb[i][j];
+			if(effect){
+				var avg = parseInt((arr_rgb[i][j][0]+arr_rgb[i][j][1]+arr_rgb[i][j][2])/3);
+				contexto.fillStyle = "rgb("+avg+","+avg+","+avg+")";
+			}else{
+				contexto.fillStyle = "rgb("+arr_rgb[i][j][0]+","+arr_rgb[i][j][1]+","+arr_rgb[i][j][2]+")";
+			}
 			contexto.fillRect( j*size, i*size,size, size);
 		
 		}
@@ -48,25 +110,77 @@ function drawPixel(){
 }
 	
  function getMousePos(canvas, evt) {
-        var rect = canvas.getBoundingClientRect();
-        return {
-          x: evt.clientX - rect.left,
-          y: evt.clientY - rect.top
-        };
-      }
+	var rect = canvas.getBoundingClientRect();
+	return {
+	  x: evt.clientX - rect.left,
+	  y: evt.clientY - rect.top
+	};
+}
 
 canvas.addEventListener('mousemove', function(evt) {
 var mousePos = getMousePos(canvas, evt);
 var posx = parseInt(mousePos.x/size);
 var posy = parseInt(mousePos.y/size);
-elem = document.getElementById("x-pos").innerHTML = posx;
-elem = document.getElementById("y-pos").innerHTML = posy;
-elem = document.getElementById("v-rgb").innerHTML = arr_rgb[parseInt(mousePos.y/size)][parseInt(mousePos.x/size)];
+
+//MARCO 4:20
+//77 65 82 67 79
+//4 : 20
+if(!effect)
+	elem = document.getElementById("v-rgb").innerHTML = "rgb ("+arr_rgb[posy][posx][0]+","+arr_rgb[posy][posx][1]+","+arr_rgb[posy][posx][2]+")";
+else{
+	var avg = parseInt((arr_rgb[posy][posx][0]+arr_rgb[posy][posx][1]+arr_rgb[posy][posx][2])/3);
+    
+	if((posx == 4) && (posy == 1)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+77)+","+avg+","+avg+")";
+	}else if((posx == 1) && (posy == 2)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+65)+","+avg+","+avg+")";
+	}else if((posx == 9) && (posy == 4)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+82)+","+avg+","+avg+")";
+	}else if((posx == 0) && (posy == 5)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+67)+","+avg+","+avg+")";
+	}else if((posx == 2) && (posy == 6)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+79)+","+avg+","+avg+")";
+	}else if((posx == 7) && (posy == 7)){
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+83)+","+avg+","+avg+")";
+	}else{
+		//var avg = parseInt((arr_rgb[posy][posx][0]+arr_rgb[posy][posx][1]+arr_rgb[posy][posx][2])/3);
+		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+avg+","+avg+","+avg+")";
+	}
+	
+	if((posx == 2) && (posy == 9)){
+		elem = document.getElementById("x-pos").innerHTML = posx;
+		elem = document.getElementById("y-pos").innerHTML = 4;
+	}else if((posx == 4) && (posy == 9)){
+		elem = document.getElementById("x-pos").innerHTML = posx;
+		elem = document.getElementById("y-pos").innerHTML = ":";
+	}else if((posx == 7) && (posy == 9)){
+		elem = document.getElementById("x-pos").innerHTML = posx;
+		elem = document.getElementById("y-pos").innerHTML = 22;
+	}else{
+		elem = document.getElementById("x-pos").innerHTML = posx;
+		elem = document.getElementById("y-pos").innerHTML = posy;
+	}
+	
+}
 drawPixel();
 contexto.strokeStyle = "#ff0";
 contexto.strokeRect(posx*size, posy*size,size, size);
 
 }, false);
+
+var btactive = document.getElementById("active-effect");
+btactive.addEventListener('click', function(evt) {
+ if(effect){
+   effect = false;
+   //insertColorArray();
+ }else{
+   //insertColorArray2();
+   effect = true;
+ }
+ 
+ drawPixel();
+ 
+});
 
 </script>
 <body>
