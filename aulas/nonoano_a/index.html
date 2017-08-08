@@ -136,43 +136,49 @@ var posy = parseInt(mousePos.y/size);
 //MARCO 4:20
 //77 65 82 67 79
 //4 : 20
-if(!effect)
-	elem = document.getElementById("v-rgb").innerHTML = "rgb ("+arr_rgb[posy][posx][0]+","+arr_rgb[posy][posx][1]+","+arr_rgb[posy][posx][2]+")";
-else{
+if(!effect){
+	 document.getElementById("v-rgb").innerHTML = "rgb ("+arr_rgb[posy][posx][0]+","+arr_rgb[posy][posx][1]+","+arr_rgb[posy][posx][2]+")";
+
+	 document.getElementById("x-pos").innerHTML = posx;
+	 document.getElementById("y-pos").innerHTML = posy;
+}else{
 	var avg = parseInt((arr_rgb[posy][posx][0]+arr_rgb[posy][posx][1]+arr_rgb[posy][posx][2])/3);
     
 	if((posx == 4) && (posy == 1)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+77)+","+avg+","+avg+")";
+		document.getElementById("v-rgb").innerHTML = "rgb ("+(255+77)+","+avg+","+avg+")";
 	}else if((posx == 1) && (posy == 2)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+65)+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+(255+65)+","+avg+","+avg+")";
 	}else if((posx == 9) && (posy == 4)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+82)+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+(255+82)+","+avg+","+avg+")";
 	}else if((posx == 0) && (posy == 5)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+67)+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+(255+67)+","+avg+","+avg+")";
 	}else if((posx == 2) && (posy == 6)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+79)+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+(255+79)+","+avg+","+avg+")";
 	}else if((posx == 7) && (posy == 7)){
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+(255+83)+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+(255+83)+","+avg+","+avg+")";
 	}else{
 		//var avg = parseInt((arr_rgb[posy][posx][0]+arr_rgb[posy][posx][1]+arr_rgb[posy][posx][2])/3);
-		elem = document.getElementById("v-rgb").innerHTML = "rgb ("+avg+","+avg+","+avg+")";
+		 document.getElementById("v-rgb").innerHTML = "rgb ("+avg+","+avg+","+avg+")";
 	}
 	
 	if((posx == 2) && (posy == 9)){
-		elem = document.getElementById("x-pos").innerHTML = posx;
-		elem = document.getElementById("y-pos").innerHTML = 4;
+		 document.getElementById("x-pos").innerHTML = posx;
+		 document.getElementById("y-pos").innerHTML = 4;
 	}else if((posx == 4) && (posy == 9)){
-		elem = document.getElementById("x-pos").innerHTML = posx;
-		elem = document.getElementById("y-pos").innerHTML = ":";
+		 document.getElementById("x-pos").innerHTML = posx;
+		 document.getElementById("y-pos").innerHTML = ":";
 	}else if((posx == 7) && (posy == 9)){
-		elem = document.getElementById("x-pos").innerHTML = posx;
-		elem = document.getElementById("y-pos").innerHTML = 22;
+		 document.getElementById("x-pos").innerHTML = posx;
+		 document.getElementById("y-pos").innerHTML = 22;
 	}else{
-		elem = document.getElementById("x-pos").innerHTML = posx;
-		elem = document.getElementById("y-pos").innerHTML = posy;
+		 document.getElementById("x-pos").innerHTML = posx;
+		 document.getElementById("y-pos").innerHTML = posy;
 	}
 	
 }
+
+
+		
 drawPixel();
 contexto.strokeStyle = "#ff0";
 contexto.strokeRect(posx*size, posy*size,size, size);
