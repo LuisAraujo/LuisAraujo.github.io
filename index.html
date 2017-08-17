@@ -12,201 +12,79 @@
 	
 	<script type="text/javascript" src="http://static.boo-box.com/javascripts/boo-inject.js"></script>
 <meta name="bbx-domain-token" content="6edef40bfab901f9b82f1b2d088aa48a4d9d144d"/>
-
+<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 <style>
+	html, body{
+		width:100%;
+		height:100%;
+	}
+	
 	body{
+		 
 	     padding: 0px;
 		 margin:0px;
-		 background-color: #f8d322;
+		 background-color: #000;
+		 background-image: url(bg.jpg);
+		 background-repeat: no-repeat;
+		 background-size: cover; 
+		 background-position: 50%;
 		 color:#1f1f1f;
 		 font-family: Swis721 Hv BT;
+		 overflow: hidden;
 	}
-
-	#conteiner-menu{
-		margin-top: 100px;
-		width: 1250px;
-		
-		height: 300px;
+	
+	#profile{
+	    width: 150px;
+		height: 150px;
+		border-radius: 75px;
+		background-color: #fff;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 100px;
+		 background-image: url(perfil.jpg);
+		 background-repeat: no-repeat;
+		 background-size: cover;
+		 
 	}
 	
-	@keyframes fadein-item-menu {
-		from { box-shadow:  0px 0px 0px  #c33536;}
-		to { box-shadow:  5px 5px 1px  #c33536;}
-	}
-	
-	
-	.item-menu{
-		  float: left;
-		  background-color: #f14143;
-		  padding: 10px;
-		  font-size: 30px;
-		  color:#fff;
-		  font-weight: bold;
-		  text-align: center;
-		  
-		  width: 200px;
-		  height: 50px;
-		  line-height: 50px; 
-		  
-		  box-shadow:  5px 5px 1px  #c33536;
-		  -ms-transform: skew(-10deg); /* IE 9 */
-		  -webkit-transform: skew(-10deg); /* Chrome, Safari, Opera */
-		  transform: skew(-10deg); /* Standard syntax */
-		  transform-origin: bottom left; /* Prevent the bottom from shifting */
-		  
-		  margin-left: 20px;
-		  margin-top: 25px;
-		  
-		  animation-name: fadein-item-menu ;
-          animation-duration: 2s; 
-	}
-	
-	.item-menu:hover{
-		cursor: pointer;
-		background-color:  #c33536;
-		box-shadow:  5px 5px 1px #f14143;
-		color: #eee;
-	}
-	
-	.item-menu-hide{
-	      float: left;
-		  background-color: rgba(0,0,0,0);
-		  padding: 10px;
-		  font-size: 30px;
-		  color:#fff;
-		  font-weight: bold;
-		  text-align: center;
-		  
-		  width: 200px;
-		  height: 50px;
-		  line-height: 50px; 
-		  
-		  margin-left: 20px;
-		  margin-top: 25px;
-		  box-shadow:  5px 5px 1px  rgba(0,0,0,0);
-		  -ms-transform: skew(-10deg); /* IE 9 */
-		  -webkit-transform: skew(-10deg); /* Chrome, Safari, Opera */
-		  transform: skew(-10deg); /* Standard syntax */
-		  transform-origin: bottom left; /* Prevent the bottom from shifting */
-		  margin-left: 20px;
-	}
-	
-	
-	#header-page{
-	    padding-top: 2px;
-		padding-bottom: 2px;
-		width: calc(100% - 20px);
-		padding-left: 10px;
-		padding-right: 10px;
-		line-height: 50px;
-		height: 50px;
-		background-color: #f8d322;
-		color:#fff;
-		font-size: 30px;
-		text-indent: 10px;
-	}
-	
-	#header-page img{
-		height: 100%;
-		float: right;
-	}
-	
-	#header-page img:hover{
-		cursor: pointer;
-	}
-	
-	
-	@keyframes background-header {
-		from { opacity: 0;}
-		to { opacity: 1;}
-	}
-	
-	.active-header{
-		animation-name: background-header;
-		animation-duration: 1s; 		
-	}
-	
-	
-	.fadein-up{
-	    animation-name: fadein-cont-msg ;
-        animation-duration: 1s; 
-	}
-	
-	
-	#conteiner-nome{
-	     position:fixed;
-		 bottom: 25px;
-		 right: 15px;
-	    
-	      font-size: 100px;
-		  color:#1f1f1f;
-		  font-weight: bold;
-		  line-height: 80px; 
-	}
-	
-	
-	#conteiner-nome:hover{
-		color:#2f2f2f;
-		cursor: pointer;
-	}
-	
-	
-	#nome{
-		position: relative;
-		left: 98px;
-	}
-	
-	
-	@keyframes fadein-cont-msg {
-		from {opacity: 0; bottom:10px}
-		to {opacity: 1; bottom: 20px;}
+	#name{
+		font-family: 'Hind', sans-serif;
+		color: #fff;
+		font-size: 4em;
+		text-align:center;
+		margin-top: 30px;
 	}
 
-	.fadein-up{
-	    animation-name: fadein-cont-msg ;
-        animation-duration: 1s; 
-	}
-	
-	
-	#conteiner-mensagem{
-	
-	    border-top: 15px  solid #f14143;
-		background-color: #fff;
-		width: 300px;
-		font-size: 12px;
-		padding: 20px;
-		text-align: justify;
+	.buttons{
+	    width:  50px;
+		height:  50px;
+		float:left;
+		margin-left:20px;
 		
-		position: fixed;
-		bottom: 20px;
-		margin-left: 10px;
-	}
-	
-	#conteiner-mensagem img{
-		position:relative;
-		top: 20px;
-		width:15px;
-	}
-	
-	
-	
+		margin-top: 100px;
 		
-	#autor{
-		text-align: right;
-		color:#555;
-		margin-top:5px;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	
-	
-	#aviso{
-	    display: none;
-		font-size: 50px;
-		color: 1f1f1f;
-		text-align: center;
-		width: 100%;
-		margin-top: 200px;
+	.github{
+		background-image: url(github.png);
+	}
+	.blog{
+		background-image: url(blog.png);
+	}
+	.youtube{
+		background-image: url(youtube.png);
+	}
+	.class{
+		background-image: url(class.png);
+	}
+	#cont-buttons{
+		width:  400px;
+		height:  50px;
+		position: absolute;
+		bottom: 150px;
+		right: 0px;
 	}
 	
 </style>
@@ -225,143 +103,19 @@
 
 </head>
 <body>
-<header id="header-page">
-	<div id="text-hp"></div>
-	<img id="bt-github" src="imgs/github-icon.png">
-</header>
 
-<div id="aviso">
-	 EM CONTRUÇÃO 
+<div id="profile"></div>
+<div id="name">Luis Araujo</div>
+
+<div id="cont-buttons">
+<div class="buttons github"> </div>
+<div class="buttons blog"> </div>
+<div class="buttons youtube"> </div>
+<div class="buttons class"> </div>
 </div>
-<nav id="conteiner-menu">
-
-<div id="bt-portifolio" class="item-menu">
-	POTIFÓLIO
- </div>
- 
- <div  id="bt-blog" class="item-menu">
-	BLOG
- </div>
-  
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-
-<div  id="bt-cursos" class="item-menu">
-	CURSOS
-</div>
-
-<div id="bt-youtube" class="item-menu">
-	YOUTUBE
-</div>
-
-<div id="bt-aulas" class="item-menu">
-	AULAS
-</div>
-
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-<div class="item-menu-hide"></div>
-
-<div id="bt-academico" class="item-menu">
-	ACADÊMICO
-</div>
-
-<div id="bt-sobre" class="item-menu">
-	SOBRE
-</div>
-
-</nav>
-
-<div id="conteiner-mensagem" class="fadein-up">
-	<div id="msg" >O mundo é um lugar perigoso de se viver, não por causa daqueles que fazem o mal, mas sim por causa daqueles que observam e deixam o mal acontecer.</div>
-	<div id="autor" >Albert Eiesten</div>
-
-</div>
-
-
-<div id="conteiner-nome">
-<div id="nome">LUIS</div>
-<div id="sobrenome" >Araujo</div>
-</div>
-
-<!--
-<h3>Site em Manutenção!</h3>
-<br>vá para: <a href="dev"> Site de Desenvolvedor</a>
-<br>vá para: <a href="amelia_informatica"> Informática Amélia </a>
-<br>vá para: <a href="senac"> Curso SENAC</a>
-<br>vá para: <a href="quemvotou"> Projeto Quem Votou?</a>
--->
 
 <script>
 
-showSecion = function(name){
-
-	  $("#bt-github").hide();
-	  $("#header-page").css("backgroundColor", "#f14143");
-	  $("#text-hp").text(name);
-	  
-	  $("#header-page").addClass("active-header");
-	 $("#conteiner-menu").fadeOut( "slow" );
-	 $("#conteiner-mensagem").fadeOut( "slow", function(){	
-			$("#aviso").show();	
-	 } );
-
-}
-$("#bt-portifolio").click(function(){
-     
-	 showSecion("PORTIFÓLIO");
-		 
-});
-
-$("#bt-blog").click(function(){
-	window.open("blog");
-});
-
-$("#bt-cursos").click(function(){
-	showSecion("CURSOS");
-});
-
-$("#bt-youtube").click(function(){
-	window.open("https://www.youtube.com/Luis4raujo");
-});
-
-$("#bt-aulas").click(function(){
-	window.open("amelia_informatica");
-});
-
-$("#bt-academico").click(function(){
-	window.open("programacao_com_midias");
-});
-
-
-$("#bt-sobre").click(function(){
-	showSecion("SOBRE");
-});
-
-
-$("#bt-github").click(function(){
-	window.open("https://github.com/LuisAraujo/");
-});
-
-$("#conteiner-nome").click(function(){
-   location.reload();
-});
-
-
-
-
-fn_timeMsg = setInterval(function(){
-   
-   $("#conteiner-mensagem").removeClass("fadein-up");
-   setTimeout(function(){
-   $("#conteiner-mensagem").addClass("fadein-up");
-   }, 20);
-   
-	
-}, 10000);
 
 
 </script>
