@@ -11,26 +11,51 @@
     <title>Luis Araujo | 2017</title>
 	
 	<script type="text/javascript" src="http://static.boo-box.com/javascripts/boo-inject.js"></script>
-<meta name="bbx-domain-token" content="6edef40bfab901f9b82f1b2d088aa48a4d9d144d"/>
-<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+	<meta name="bbx-domain-token" content="6edef40bfab901f9b82f1b2d088aa48a4d9d144d"/>
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+	<link href="animate.css" rel="stylesheet">
 <style>
 	html, body{
 		width:100%;
 		height:100%;
+		padding: 0px;
+		margin:0px;
+		overflow: hidden;
+		background-color: #000;
 	}
 	
-	body{
-		 
-	     padding: 0px;
-		 margin:0px;
-		 background-color: #000;
-		 background-image: url(bg.jpg);
-		 background-repeat: no-repeat;
-		 background-size: cover; 
-		 background-position: 50%;
-		 color:#1f1f1f;
-		 font-family: Swis721 Hv BT;
-		 overflow: hidden;
+	#background{
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		width:100%;
+		height:100%;
+		display: block;
+
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover; 
+		background-position: 50%;
+		color:#1f1f1f;
+		font-family: Swis721 Hv BT;
+		overflow: hidden;
+
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+	}
+	
+	#container{
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 99;
+		width:100%;
+		height:100%;
+		display: block;
 	}
 	
 	#profile{
@@ -55,6 +80,14 @@
 		margin-top: 30px;
 	}
 
+	#subtitle{
+		width: 50%;
+		margin-left: 25%;
+		font-family: 'Hind', sans-serif;
+		color: #fff;
+		font-size: 1em;
+		text-align:center;
+	}
 	.buttons{
 	    width:  50px;
 		height:  50px;
@@ -65,13 +98,20 @@
 		
 		background-repeat: no-repeat;
 		background-size: cover;
+		opacity: 0.7;
+	}
+	
+	.buttons:hover{
+		opacity:1;
+		cursor:pointer;
+	
 	}
 	
 	.github{
 		background-image: url(github.png);
 	}
 	.blog{
-		background-image: url(blog.png);
+		background-image: url(blog2.png);
 	}
 	.youtube{
 		background-image: url(youtube.png);
@@ -86,7 +126,7 @@
 		bottom: 150px;
 		right: 0px;
 	}
-	
+
 </style>
 
 <script src="js/jquery.js"></script>
@@ -103,17 +143,22 @@
 
 </head>
 <body>
+<div id="background"></div>
+<div id="container">
 
-<div id="profile"></div>
-<div id="name">Luis Araujo</div>
+	<div id="profile" class="animated fadeInDown"></div>
+	<div id="name" class="animated fadeInDown">Luis Araujo</div>
+	<div id="subtitle" class="animated fadeIn">Teacher of Computer Science, Game and Web Developer and Student of Master Degrees in Computer Applied, research about
+	Teach of Programming and Game Development. <i>Love coffee.</i>
 
-<div id="cont-buttons">
-<div class="buttons github"> </div>
-<div class="buttons blog"> </div>
-<div class="buttons youtube"> </div>
-<div class="buttons class"> </div>
+	
+	
+	<div id="cont-buttons">
+	<a class="buttons github" target="black" href="https://github.com/LuisAraujo/"> </a>
+	<a class="buttons blog"target="black" href="http://luisaraujo.github.io/blog/"> </a>
+	<a class="buttons youtube"target="black" href="https://www.youtube.com/Luis4raujo"> </a>
+	<a class="buttons class"target="black" href="http://luisaraujo.github.io/aulas/"> </a>
 </div>
-
 <script>
 
 
