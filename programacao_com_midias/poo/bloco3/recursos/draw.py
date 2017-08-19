@@ -10,8 +10,8 @@ from pygame.locals import *
 # Initializes pygame's modules
 pygame.init()
 
-"""An Draw Shape class. Developmented for Luis Gustavo Araujo by Group of Researche Computer and
-Education of University Statates of Feira de Santana"""
+"""An Draw shape class. Developed by Luis Gustavo Araujo in Group of research Technology 
+of Information of State University of Feira de Santana."""
 class Draw():
     """
     Draw Shapes with statics methods
@@ -51,7 +51,7 @@ class Draw():
         pygame.draw.aaline(Surface.screen, color, startpos, endpos, blend)
         
     #draw a connected sequence of antialiased lines
-    def aalines(Surface, color, closed, pointlist, blend=1):	 
+    def aalines(Surface, color, pointlist,closed, blend=1):	 
         pygame.draw.aalines(Surface.screen, color, closed, pointlist, blend)
 
     #-----------------------SET METHODS AS STATICS --------------------
