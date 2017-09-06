@@ -24,7 +24,7 @@
 			ga('create', 'UA-91092552-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-	
+	<!--
 		<script>
 		
 			 url = window.location.href.split("://")[0];
@@ -33,7 +33,7 @@
 			   window.location.href  = "https://"+window.location.href.split("://")[1];
 			}
 		</script> 
-		
+		-->
 </head>
 
 <body>
@@ -61,44 +61,54 @@
 	
 <p>Olá pessoal, nesta semana estou desenvolvendo um jogo
 para uma <i>game jam</i>, junto com dois amigos: Gui Mendes (arte) e Marcos Gomes (áudio). Neste jogo eu estou apenas
-programando, em <i>javascript</i> claro! </p>
+programando, em <i>javascript</i>, claro! </p>
 
 <p>
 Mas porque estou falando sobre isso? Essa <i>game jam</i> é uma <i>jam</i> muito específica e que me deixou com vontade de 
 falar sobre o processo de desenvolvimento. A <i>game jam</i> em questão é a <a  target="black" href="http://js13kgames.com/JS13kGame">JS13kGame</a>, nela você tem que criar um 
 jogo usando javascript, sem nenhum recurso extra (links para frameworsk e etc) e que, no total, tenha 13kb!
-Nossa!!! Apenas 13kb para um jogo? Pois é!  
+</p>
+<p>
+Você: <i> Nossa!!! Apenas 13kb para um jogo? </i> <br>
+Eu:  <i>Pois é! </i> 
 </p>
 
 <p>
-Na realidade, é um pouco mais, pois você pode mimificar o seu arquivo js e pode zipar todos os recursos, o que lhe dá um 
-espaço a mais. O último teste que fiz, meus arquivos somavam 27kb e foram reduzidos à 4kb, após o processo citado.
-Mas como usar imagens e áudios nesse jogos? Ainda assim é pouco espaço, não? A resposta é "depende", pois
-você pode usar suas habilidades de programador para criar novas formas de representação. Por exemplo: Explorar recursos nativos
-como o <i>Canvas</i> e a <i>Audio API</i>. 
+Na realidade, é um pouco mais, pois você pode minificar o seu arquivo js e pode zipar todos os recursos, o que lhe dá um 
+espaço a mais. O último teste que fiz, meus arquivos somavam <b>27kb</b> e foram reduzidos à <b>4kb</b>, após o processo citado.
+A <i>jam</i> começou dia 1 de agosto e termina 13 de setembro, mas já tem alguns <a  target="black" href="http://js13kgames.com/entries/2017">jogos submetidos</a>. 
+Saca só esse  <a target="black" href="http://js13kgames.com/entries/all-is-not-lost">pong em 3D</a>! Viu o que dá para fazer com 13kb?
+</p>
+<p>
+Você: <i> OK! Mas como usar imagens e áudios nesses jogos? Ainda assim é pouco espaço, não?  </i> <br>
+Eu:  <i> Depende! </i> 
 </p>
 
 <p>
-O prazo da <i>jam</i> é até dia 13 de setembro (iniciou dia 1 de agosto) e já tem alguns <a  target="black" href="http://js13kgames.com/entries/2017">jogos submetidos</a>. 
-Saca só esse  <a target="black" href="http://js13kgames.com/entries/all-is-not-lost">pong em 3D</a>!
-Mas vamos voltar ao foco! Para minimizar o tamanho, decidimos não usar imagens, para isso criei uma forma de respresentação de 
-imagens através de matriz, assim como decidimos não usar áudios, para isso criei uma forma de criar músicas de forma rápida usando arrays!
-Agora verifiquei que podemos reduzir ainda mais as matrizes e estou criando uma forma de compactá-las. Nesse post, no entanto,
- vou focar apenas nas imagens, para não ficar muito longo!
+A resposta é "depende", pois você pode usar compressão de imagens, áudios, reutilizar recursos e até usá-los moderadamente.
+Além disso, você pode usar suas habilidades de programador para criar novas formas de representação. Por exemplo: Explorar recursos nativos
+do <i>Canvas</i> e a <i>Audio API</i>. 
+</p>
+<p>
+
+Diante deste problema, decidimos <b>não</b> usar imagens, para isso criamos uma forma de respresentação de 
+imagens através de matriz, assim como decidimos não usar áudios, para isso criamos uma forma de compor músicas (16bits) de forma rápida usando arrays!
+Durante o desenvolvimento, verificamos que podemos reduzir ainda mais as matrizes e estou criando uma forma de 
+compactá-las. Nesse post, no entanto, vou focar apenas nas imagens, para não ficar muito longo!
 </p>
 
 <div class="subtitle"> Representando uma imagem</div>
 
 <p>
 Para representar uma imagem, usamos uma matriz de valores. Os valores inicialmente eram em formato RGB, ou seja uma trinca
-de valores, por exemplo: <i>100,100,100</i>. Depois evoluímos para utilizar o valor <i>alfa</i>, já que alguns elementos do jogo 
-tem informações de tranparência.
+de valores, por exemplo: <i>100,100,100</i>. Depois evoluímos para utilizar o valor <i>alfa</i>, 
+já que alguns elementos do jogo tem informações de transparência.
 </p>
 
 <p>
 No entanto, havia muita informação repetida, pois uma cor era replicada em cada elemento da matriz. 
 Então revolvemos utilizar um método antigo - usando nos consoles da dácada de 80/90 -
-que é o uso de indícies associados a paletas de cores. Isso foi usado no Mário, por exemplo, onde a núvem e a arbusto utilizam
+que é o uso de indícies associados a paletas de cores. Isso foi usado no Mário, por exemplo, onde a núvem e o arbusto utilizam
 o mesmo sprite, apenas como mudança de paleta (veja na image do <a href="https://twitter.com/curiosidades_tm/status/528884880286154752">@curiosidades_tm</a>). 
 </p>
 
@@ -123,8 +133,8 @@ sprite_pallet = [[0,0,0,0],[255,0,0,1]];
 
 
 <p>
-Mas como faço para "desenhar"? Isso é simples, à cada elemento em sprite_map, eu crio um retângulo, com base no tamanho
-do pixel que quero. Vejamos:
+Mas como faço para "desenhar"? Isso é simples, a cada elemento em sprite_map, cria-se um retângulo, com base no tamanho
+do pixel desejado. Vejamos:
 </p>
 <div class="code">
 for(var i=0; i  &lt; sprite_map.length; i++){<br>
@@ -148,7 +158,7 @@ Ajustando o tamanho do png, no canvas:
 <img class="img-little" src='../../img/print_js13game02.png'>
 
 <p>
-Percebe-se que a qualidade é inferior, pois a imagem é muito pequena. Usando matriz temos o seguinte resultado:
+Percebe-se que a qualidade é inferior, pois a imagem é muito pequena. Usando matriz, temos o seguinte resultado:
 </p>
 
 <img class="img-little" src='../../img/print_js13game03.png'>
@@ -167,9 +177,10 @@ Ajustando o tamanho da matriz, basta mudar o tamanho do pixel:
 <img class="img-little" src='../../img/print_js13game05.png'>
 <p>Como podemos ver, temos 
 um resultado visual bem semelhante, mas o tamanho da imagem agora é: <b>png = 852 bytes (imagem) + 156 bytes (file.js)</b>. 
-Ok, a matriz ainda é <b>matriz = 3.6 kb</b>! Existem formas de reduzir isso, uma é mimificar: <b>matriz = 3.4 kb</b>. 
-Outra forma, falarei no próximo post. Apenas digo que o tamanho do método como matriz fica <b>matriz = 2,77 kb</b> e
-miminifaco <b>matriz: 2,62 kb</b> :) 	
+Ok, a matriz ainda é <b>matriz = 3.6 kb</b>! Existem formas de reduzir isso, uma é minificar, como já disse, neste caso 
+a redução seria para: <b>matriz = 3.4 kb</b>. <i>Obs: como o código é pequeno, não há muita redução.</i>
+A outra forma, falarei no próximo post, apenas adianto que o tamanho da matriz pode ficar <b>matriz = 2,77 kb</b> e
+minificado <b>matriz: 2,62 kb</b> :) 	
 </p>
 
 
@@ -185,14 +196,15 @@ Outra  vantagem é no reuso.Veja um exemplo de mudança de paleta!
 
 
 <p>
-Para duas imagens apenas, temos:<b> matriz = 3,6 kb + 0,05 bytes; png = (852 bytes * 2) + 156 bytes (file.js)</b>. Fazendo um projeção com
-<b> matriz = 3,6 kb + (0,05 bytes)*n; png = (852 bytes * n) + 156 bytes</b>, onde n é o número de variações de paleta, temos pra n = 10: 
-<b> matriz = 3,6 kb + 0,5 kb = 4,1kb; png = 8,52 kb + 156 bytes</b>. Veja no gráfico de comparação, quando n = 4, já é vantagem usar.  
+Para duas imagens apenas, temos:<b> matriz = 3,6 kb + 0,05 bytes</b> e <b>png = (852 bytes * 2) + 156 bytes (file.js)</b>. Fazendo um projeção com
+<b> matriz = 3,6 kb + (0,05 bytes)*n</b> e <b> png = (852 bytes * n) + 156 bytes</b>, onde n é o número de variações de paleta, 
+temos para n = 10, 
+<b> matriz = 3,6 kb + 0,5 kb = 4,1kb;</b> e <b> png = 8,52 kb + 156 bytes</b>. Veja no gráfico de comparação, quando n = 4, já é vantagem usar.  
 </p>
 <img class="img-little" src='../../img/print_js13game07.png'>
 
 <p>
-Matematicamente, o nosso método é melhor do que usar png, no que se refere à armazenamento, em dois pontos: tamanho e reuso. 
+Matematicamente, o nosso método é melhor do que usar png, no que se refere à armazenamento, em dois pontos: dimensão e reuso. 
 É isso galera, no próximo post conto um pouco mais sobre as matrizes
 de imagens e os problemas como imagens grandes!
 </p>
