@@ -168,7 +168,8 @@ Ajustando o tamanho da matriz, basta mudar o tamanho do pixel:
 <p>Como podemos ver, temos 
 um resultado visual bem semelhante, mas o tamanho da imagem agora é: <b>png = 852 bytes (imagem) + 156 bytes (file.js)</b>. 
 Ok, a matriz ainda é <b>matriz = 3.6 kb</b>! Existem formas de reduzir isso, uma é mimificar: <b>matriz = 3.4 kb</b>. 
-Outra forma, falarei no próximo post. :) 
+Outra forma, falarei no próximo post. Apenas digo que o tamanho do método como matriz fica <b>matriz = 2,77 kb<b> e
+miminifaco <b>matriz: 2,62 kb</b> :) 	
 </p>
 
 
@@ -178,12 +179,18 @@ que a matriz se mantem com o mesmo tamanho. Se fizermos uma projeção, logo a m
 </p>
 
 <p>
-Outra  vantagem é no reuso, para duas imagens apenas, temos:<b> matriz = 3,6 kb + 0,05 bytes; png = (852 bytes * 2) + 156 bytes (file.js)</b>. Fazendo um projeção com
-<b> matriz = 3,6 kb + (0,05 bytes)*n; png = (852 bytes * n) + 156 bytes</b>, onde n é o número de variações de paleta, temos pra n = 10: 
-<b> matriz = 3,6 kb + 0,5 kb = 4,1kb; png = 8,52 kb + 156 bytes</b>. Veja um exemplo de mudança de paleta!
+Outra  vantagem é no reuso.Veja um exemplo de mudança de paleta!
 </p>
-
 <img class="img-little" src='../../img/print_js13game06.png'>
+
+
+<p>
+Para duas imagens apenas, temos:<b> matriz = 3,6 kb + 0,05 bytes; png = (852 bytes * 2) + 156 bytes (file.js)</b>. Fazendo um projeção com
+<b> matriz = 3,6 kb + (0,05 bytes)*n; png = (852 bytes * n) + 156 bytes</b>, onde n é o número de variações de paleta, temos pra n = 10: 
+<b> matriz = 3,6 kb + 0,5 kb = 4,1kb; png = 8,52 kb + 156 bytes</b>. Veja no gráfico de comparação, quando n = 4, já é vantagem usar.  
+</p>
+<img class="img-little" src='../../img/print_js13game07.png'>
+
 <p>
 Matematicamente, o nosso método é melhor do que usar png, no que se refere à armazenamento, em dois pontos: tamanho e reuso. 
 É isso galera, no próximo post conto um pouco mais sobre as matrizes
