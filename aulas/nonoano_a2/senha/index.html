@@ -3,7 +3,6 @@
 <meta charset="utf-8">
 <script src="md5.js"></script>
 <script>
-
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -11,6 +10,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-91092552-1', 'auto');
 ga('send', 'pageview');
+
+console.log(hex_md5("cade a faca?"))
 </script>
 </head>
 <body>
@@ -34,7 +35,7 @@ var btpassword = document.getElementById("bt-password");
 btpassword.addEventListener('click', function(evt) {
 
 var password = document.getElementById("password").value;
-    if(hex_md5(password.toLowerCase()).toString() == "50c48e586859aaca2d2a83a99d3c7797"){
+    if(hex_md5(password.toLowerCase()).toString() == "a07a33e808b393b68c781b1d9bd9377e"){
 	  document.getElementById("msg-sucess").style.display = "block";
 	  document.getElementById("msg-erro").style.display = "none";
 	 
@@ -46,7 +47,6 @@ var password = document.getElementById("password").value;
 
 	
 });
-
 
 </script>
 <body>

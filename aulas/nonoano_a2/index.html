@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-91092552-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script>
+canvas = null;
+
+window.onload = function(){
+
+	effect = false;
+	canvas = document.getElementById("canvas");
+	canvas.addEventListener('click', function(evt) {
+	mousepos = getMousePos(canvas, evt);
+	console.log(mousepos)
+	if((mousepos.x >= 110 && mousepos.x <= 140) &&
+	(mousepos.y >= 205 && mousepos.y <= 255))
+	{
+		alert("Vá até a página da senha, informe a frase (sem acentos) do áudio e acrescente o símbolo '?' ")
+	}
+	});
+
+	contexto = canvas.getContext("2d");
+	image = document.getElementById("image");
+	image2 = document.getElementById("image2");
+	contexto.drawImage(image,0,0);
+	contexto.drawImage(image2,110,205,30,50);
+}
+
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect();
+	return {
+	  x: evt.clientX - rect.left,
+	  y: evt.clientY - rect.top
+	};
+}
+
+
+
+
+</script>
+
+</head>
+<body>
+<div style="text-align: center">
+<h2>Desafio: Encontre a Mensagem Escondida no Audio</h2>
+<br>
+<br>
+1 - Encontre a mensagem escondida no audio<br>
+2 - Ela é apenas uma pista<br>
+3 - Encontre a palavra através da pista <i>(juntamente com a imagem)</i><br>
+4 - Vá na página: <a href="senha"> luisaraujo.github.io/aula/nonoano_a2/senha</a><br>
+5 - Digite a palavra e verifique se é a correta<br>
+<br>
+
+
+</div>
+<div style="text-align:center">Audio: <br>
+<audio src="audio_desafio.wav" controls></audio>
+<br>
+baixe o áudio <a href="audio_desafio.wav"> aqui </a>
+<br>
+<br>
+</div>
+<div style="text-align:center">Imagem:</div>
+ <canvas style="margin-left: calc(50% - 250px)" id="canvas" height="300" width="500"> </canvas>
+</div>
+<div style="text-align: center">
+<img id="image" src="img.jpg" style="display: none">
+<img id="image2" src="img_faca.png" style="display: none">
+
+
+<body>
+</html>
