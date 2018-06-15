@@ -1,0 +1,7 @@
+ATIVIDADE
+av1 - [17/06] - Entrega do Projeto AL (em dupla)
+av2 - [19/06] - Apresentação Seminário AS (em dupla)
+
+* Mudar a data no pdf
+* Mudar Avaliação da av1
+* Gerar pdf sobre seminário
